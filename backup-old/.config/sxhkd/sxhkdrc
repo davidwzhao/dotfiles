@@ -1,0 +1,32 @@
+# XF86AudioLowerVolume
+#     /home/david/Documents/Scripts/volumeDecrease.sh
+    
+# XF86AudioRaiseVolume
+#     /home/david/Documents/Scripts/volumeIncrease.sh
+
+# XF86AudioMute
+#     /home/david/Documents/Scripts/volumeMute.sh
+
+alt + minus
+    amixer sset PCM 5%-
+
+alt + equal
+    amixer sset PCM 5%+
+
+alt + 0
+    amixer sset PCM toggle
+
+alt + p
+    playerctl -p spotify play-pause
+
+alt + bracketleft 
+    playerctl -p spotify previous
+
+alt + bracketright
+    playerctl -p spotify next
+
+Print
+    scrot /home/david/Pictures/Screenshots/%H%M_%d-%m-%Y.png
+
+super + space
+    rofi -show run
