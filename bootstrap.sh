@@ -27,7 +27,7 @@ function backup_file {
     
     # if file doesn't exist in home dir
     if [[ "$backup_filename" == "" ]]; then
-        :
+        printf "File $file doesn't exist in $HOME_DIR... skipping\n"
     
     # if file already backed up
     elif [ -f "$BACKUP_DIR/$backup_filename" ] ; then
@@ -35,11 +35,11 @@ function backup_file {
     
     # else, we need to back up file
     else
-        printf "Backing up $file to $BACKUP_DIR/$backup_filename... \n"
+        printf "Backing up $file to $BACKUP_DIR/$backup_filename... "
         echo "$backup_filename" | sed 's:/[^/]*$::'
         $backup_folder="$BACKUP_DIR/$(echo "$backup_filename" | sed 's:/[^/]*$::')"
         echo "$backup_folder"
-        # mkdir -p  && cp "$HOME_DIR/$file" "$_"
+        mkdir -p "$backup_folder" && cp "$HOME_DIR/$file" "$_/$backup_filename"
         printf "done\n"
     fi
 }
@@ -48,6 +48,4 @@ function backup_file {
 cd "$CONFIG_DIR"
 for file in $(find . -type f | cut -c 3-); do
     backup_file "$file"
-done
-
-    
+done 
