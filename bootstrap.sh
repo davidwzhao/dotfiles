@@ -36,10 +36,10 @@ function backup_file {
     # else, we need to back up file
     else
         printf "Backing up $file to $BACKUP_DIR/$backup_filename... \n"
-        echo "$backup_filename" | sed 's:/[^/]*$::'
-        $backup_folder="$BACKUP_DIR/$(echo "$backup_filename" | sed 's:/[^/]*$::')"
-        echo "$backup_folder"
-        # mkdir -p  && cp "$HOME_DIR/$file" "$_"
+        # $backup_folder="$BACKUP_DIR/$(echo "$backup_filename" | sed 's:/[^/]*$::')"
+        original_folder="$(dirname "$HOME_DIR/$file")"
+        backup_folder=${original_folder#$HOME_DIR}
+        mkdir -p "$BACKUP_DIR/$backup_folder" && cp "$HOME_DIR/$file" "$BACKUP_DIR/$backup_filename"
         printf "done\n"
     fi
 }
