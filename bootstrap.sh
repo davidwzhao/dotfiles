@@ -40,8 +40,7 @@ backup_file() {
     
     # else, we need to back up file
     else
-        printf "Backing up $file to $BACKUP_DIR/$backup_filename... \n"
-        # $backup_folder="$BACKUP_DIR/$(echo "$backup_filename" | sed 's:/[^/]*$::')"
+        printf "Backing up $file to $BACKUP_DIR/$backup_filename... "
         original_folder="$(dirname "$HOME_DIR/$file")"
         backup_folder=${original_folder#$HOME_DIR}
         mkdir -p "$BACKUP_DIR/$backup_folder" && cp "$HOME_DIR/$file" "$BACKUP_DIR/$backup_filename"
@@ -54,11 +53,13 @@ link_file() {
 
     file="$1"
     
-    # create symbolic link
-    ln -sf "$CONFIG_DIR/$file" "$HOME_DIR/$file"
+    printf "Linking $HOME_DIR/$file to $CURRENT_DIR/$CONFIG_DIR/$file... "
+    # create symbolic link, force removal of old file
+    ln -sf "$CURRENT_DIR/$CONFIG_DIR/$file" "$HOME_DIR/$file"
+    printf "done\n"
 }
 
-# backup each existing file in home directory
+# backup and link each file in CONFIG_DIR
 cd "$CONFIG_DIR"
 for file in $(find . -type f | cut -c 3-); do
     backup_file "$file"
