@@ -5,13 +5,13 @@
 # keeping directory structure
 
 CURRENT_DIR=$(pwd)
-# HOME_DIR="$HOME"
-# CONFIG_DIR="config"
-# BACKUP_DIR="backup"
+HOME_DIR="$HOME"
+CONFIG_DIR="config/linux"
+BACKUP_DIR="backup"
 
-HOME_DIR="test-home"
-CONFIG_DIR="test-config"
-BACKUP_DIR="test-backup"
+# HOME_DIR="test/test-home"
+# CONFIG_DIR="test/test-config"
+# BACKUP_DIR="test/test-backup"
 
 # make backup directory if it doesn't exist
 if [ ! -d "$BACKUP_DIR" ]; then
@@ -43,7 +43,8 @@ backup_file() {
         printf "Backing up $file to $BACKUP_DIR/$backup_filename... "
         original_folder="$(dirname "$HOME_DIR/$file")"
         backup_folder=${original_folder#$HOME_DIR}
-        mkdir -p "$BACKUP_DIR/$backup_folder" && cp "$HOME_DIR/$file" "$BACKUP_DIR/$backup_filename"
+        mkdir -p "$BACKUP_DIR/$backup_folder"
+        cp "$HOME_DIR/$file" "$BACKUP_DIR/$backup_filename"
         printf "done\n"
     fi
 }
@@ -55,6 +56,9 @@ link_file() {
     
     printf "Linking $HOME_DIR/$file to $CURRENT_DIR/$CONFIG_DIR/$file... "
     # create symbolic link, force removal of old file
+    link_folder="$(dirname $CURRENT_DIR/$CONFIG_DIR/$file)"
+    relative_folder="${link_folder#$CURRENT_DIR/$CONFIG_DIR}"
+    mkdir -p "$HOME_DIR/$relative_folder"
     ln -sf "$CURRENT_DIR/$CONFIG_DIR/$file" "$HOME_DIR/$file"
     printf "done\n"
 }

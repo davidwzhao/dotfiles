@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =4
+let g:netrw_dirhist_1='/home/david/.config/sxhkd'
+let g:netrw_dirhist_2='/home/david/.config'
+let g:netrw_dirhist_3='/home/david/.config/sxhkd'
+let g:netrw_dirhist_4='/home/david/dotfiles/backup/.vimrc-2017-03-10'
