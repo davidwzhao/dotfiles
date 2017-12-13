@@ -25,11 +25,27 @@ if has("autocmd")
     filetype plugin indent on
 endif
 
+" Fix latex indenting
+let g:tex_flavor='latex'
+
+" Line at column 80
+set colorcolumn=80
+
 " Line wrap by word
 set linebreak
 
 " Turn on search highlighting
 set hlsearch
 
+" Use system clipboard
+set clipboard=unnamedplus
+
 " Enable mouse support
 set mouse=a
+
+" Enable spell check
+setlocal spell spelllang=en_us
+
+" Enable persistent undo
+set undofile
+set undodir=~/.vimundo

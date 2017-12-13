@@ -29,4 +29,4 @@ Print
     scrot /home/david/Pictures/Screenshots/%H%M_%d-%m-%Y.png
 
 super + space
-    rofi -show run
+    rofi modi drun,run -show drun

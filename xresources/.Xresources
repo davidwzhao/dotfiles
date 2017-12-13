@@ -22,9 +22,8 @@
 #define S_base03        #002b36
 #define S_base02        #073642
 #define S_base01        #586e75
-!! #define S_base00        #657b83
-!! #define S_base00        #859ba3
 #define S_base00        #a5bbc3
+!! #define S_base00        #000000
 #define S_base0         #839496
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
@@ -38,6 +37,7 @@
 #define S_cyan          #2aa198
 #define S_green         #859900
 #define bg_color        #202020
+!! #define bg_color        #ffffff
 
 !! *background:            S_base03
 *background:            bg_color
@@ -90,7 +90,7 @@ XTerm*termName:  xterm-256color
 
 xterm*loginshell: true
 
-xterm*vt100*geometry: 200x60
+xterm*vt100*geometry: 240x70
 
 !! xterm*foreground: rgb:a8/a8/a8
 !! xterm*background: rgb:00/10/15
@@ -100,7 +100,7 @@ xterm*faceSize: 9
 
 xterm*activeIcon: true
 
-xterm*vt100*internalBorder: 16
+xterm*vt100*internalBorder: 32
 
 xterm*vt100.translations: #override \n\
         Ctrl ~Shift <Key>Tab: string(0x1b) string("[27;5;9~") \n \
@@ -113,7 +113,7 @@ rofi.key-run: SuperL+space
 rofi.disable-history: false
 rofi.fuzzy: true
 
-rofi.font: Fira Code Retina 9
+rofi.font: Fira Code Retina 12
 rofi.line-margin: 5
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
@@ -133,3 +133,8 @@ rofi.padding: 10
 rofi.fullscreen: false
 rofi.sidebar-mode: false
 rofi.monitor: 0
+
+
+!! Display dpi
+Xft.dpi: 132
+Xcursor.size: 32
