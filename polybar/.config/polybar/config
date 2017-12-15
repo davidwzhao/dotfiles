@@ -7,7 +7,6 @@
 format-padding = 2
 format-background = ${colors.modulebg}
 
-
 [colors]
 fg = ${xrdb:color7}
 bg = ${xrdb:background}
