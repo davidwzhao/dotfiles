@@ -1,0 +1,228 @@
+[global/wm]
+;margin-top =
+;margin-bottom = 2
+;
+
+[settings]
+format-padding = 2
+format-background = ${colors.modulebg}
+
+
+[colors]
+fg = ${xrdb:color7}
+bg = ${xrdb:background}
+modulebg = #282828
+
+focused = #606060
+urgent = ${xrdb:color9}
+
+red = ${xrdb:color1}
+orange = ${xrdb:color9}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
+blue = ${xrdb:color4}
+magenta = ${xrdb:color5}
+violet = ${xrdb:color13}
+cyan = ${xrdb:color6}
+
+[bar/top]
+width = 100%
+height = 40
+offset-x = 0%
+offset-y= 0%
+;fixed-center =
+override-redirect = false
+
+background = ${colors.bg}
+foreground = ${colors.fg}
+
+font-0 = Fira Code Retina:size=12:;0
+font-1 = MaterialIcons:size=12:;1
+font-2 = Wuncon Siji:pixelsize=8:;2
+
+modules-left =  xworkspaces xwindow
+modules-center = time date
+modules-right = spotify volume dropbox memory temp filesystem ssid
+
+;tray-position = right
+;tray-padding = 2
+;tray-background = ${colors.bg}
+;tray-transparent = false
+;tray-detached = false
+
+;open menu on right click
+click-right = xdotool key super+m
+;click-right = "thunar &"
+
+underline-size = 4
+
+border-size = 0
+border-color = #00000000
+
+spacing = 1
+padding-left = 2
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 1
+
+[module/volume]
+type = internal/volume
+
+master-soundcard = default
+master-mixer = PCM
+
+format-volume = <ramp-volume><label-volume>
+module-margin-right = 1
+ramp-volume-0 = 
+ramp-volume-1 = 
+ramp-volume-2 = 
+
+format-volume-foreground = ${colors.fg}
+;format-volume-background = ${colors.bg}
+
+label-muted =  ───
+
+format-volume-underline = ${colors.blue}
+format-muted-underline = ${colors.blue}
+
+[module/xwindow]
+type = internal/xwindow
+interval = 1
+label = %title:0:50:...%
+
+format-underline = ${colors.orange}
+
+[module/xworkspaces]
+type = internal/xworkspaces
+
+enable-click = true
+enable-scroll = false
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+
+; properties of current workspace
+label-active = 
+label-active-padding = 1
+label-active-foreground = ${colors.fg}
+;label-active-background = ${colors.bg}
+label-active-underline = ${colors.orange}
+
+;label-occupied = %icon%
+;label-occupied-padding = 1
+;label-occupied-foreground = ${colors.fg}
+;label-occupied-background = ${colors.bg}
+;label-occupied-underline = ${colors.focused}
+
+label-urgent = %icon%
+label-urgent-padding = 1
+label-urgent-foreground = ${colors.fg}
+;label-urgent-background = ${colors.bg}
+label-urgent-underline = ${colors.urgent}
+
+label-empty = %icon%
+label-empty-padding = 1
+label-empty-foreground = ${colors.fg}
+
+format-padding = 0
+
+[module/date]
+type = internal/date
+interval = 1
+date = "%A, %d %B"
+
+label = %date%
+format = <label>
+
+format-prefix = " "
+format-underline = ${colors.violet}
+format-padding = 2
+format-background = ${colors.modulebg}
+
+[module/time]
+type = internal/date
+interval = 1
+time = "%I:%M %P"
+
+label = %time%
+format = <label>
+
+;format = %icon-time% <time>
+;format-padding = 1
+;format-background = #73ecec
+;format-foreground = #075859
+
+format-prefix = " "
+format-underline = ${colors.violet}
+
+[module/memory]
+type = internal/memory
+interval = 1
+
+format = <label>
+label = "%percentage_used%"
+
+format-prefix = " "
+format-underline = ${colors.cyan}
+
+[module/temp]
+type = internal/temperature
+interval = 1
+
+thermal-zone = 0
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
+
+format = <label>
+format-warn = <label-warn>
+
+label = "%temperature%"
+label-warn = "%temperature%"
+label-warn-foreground = ${colors.orange}
+
+format-prefix = " "
+format-underline = ${colors.cyan}
+
+[module/filesystem]
+type = internal/fs
+interval = 10
+
+mount-0 = /
+
+format-mounted = <label-mounted>
+label-mounted = " %percentage_used%"
+label-unmounted = " %mountpoint% ---"
+
+format-mounted-underline = ${colors.cyan}
+format-unmounted-underline = ${colors.cyan}
+
+[module/spotify]
+type = custom/script
+exec =  ~/bin/spotify.sh
+interval = 0.1
+click-left = playerctl -p spotify play-pause
+
+format-underline = ${colors.blue}
+
+[module/dropbox]
+type = custom/script
+exec =  ~/bin/dropbox.sh
+interval = 1
+
+format-prefix = " "
+format-underline = ${colors.cyan}
+
+[module/ssid]
+type = custom/script
+
+;format = <label><exec>
+exec = iwconfig wlp8s0 | grep ESSID | awk '{out=""; for (i=4; i<= NF; i++) out=out$i" "; print out}' | sed 's/ESSID:"\|"//g' | head -c -2
+interval = 10
+
+format-prefix = " "
+format-underline = ${colors.green}
+
+; vim:ft=dosini
