@@ -6,12 +6,12 @@ syntax on
 
 " Colorscheme
 set background=dark
-let g:solarized_termcolors=256
-let g:solarized_termtrans=1
-let g:solarized_degrade=0
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
-colorscheme solarized
+" let g:solarized_termcolors=256
+" let g:solarized_termtrans=1
+" let g:solarized_degrade=0
+" let g:solarized_contrast="high"
+" let g:solarized_visibility="high"
+colorscheme gruvbox
  
 " Tabs and stuff
 set shiftwidth=4        " Size of tab when using >> or <<
@@ -44,7 +44,7 @@ set clipboard=unnamedplus
 set mouse=a
 
 " Enable spell check
-setlocal spell spelllang=en_us
+" setlocal spell spelllang=en_us
 
 " Enable persistent undo
 set undofile

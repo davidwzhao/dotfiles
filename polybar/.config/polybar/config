@@ -8,7 +8,7 @@ format-padding = 2
 format-background = ${colors.modulebg}
 
 [colors]
-fg = ${xrdb:color7}
+fg = ${xrdb:foreground}
 bg = ${xrdb:background}
 modulebg = #282828
 
@@ -35,8 +35,8 @@ override-redirect = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = Fira Code Retina:size=12:;0
-font-1 = MaterialIcons:size=12:;1
+font-0 = Fira Code Retina:size=12:;1
+font-1 = MaterialIcons:size=12:;2
 font-2 = Wuncon Siji:pixelsize=8:;2
 
 modules-left =  xworkspaces xwindow
@@ -138,7 +138,7 @@ label = %date%
 format = <label>
 
 format-prefix = " "
-format-underline = ${colors.violet}
+format-underline = ${colors.magenta}
 format-padding = 2
 format-background = ${colors.modulebg}
 
@@ -156,7 +156,7 @@ format = <label>
 ;format-foreground = #075859
 
 format-prefix = " "
-format-underline = ${colors.violet}
+format-underline = ${colors.magenta}
 
 [module/memory]
 type = internal/memory
