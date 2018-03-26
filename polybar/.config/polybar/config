@@ -218,7 +218,8 @@ format-underline = ${colors.cyan}
 type = custom/script
 
 ;format = <label><exec>
-exec = iwconfig wlp8s0 | grep ESSID | awk '{out=""; for (i=4; i<= NF; i++) out=out$i" "; print out}' | sed 's/ESSID:"\|"//g' | head -c -2
+;exec = iwconfig wlp8s0 | grep ESSID | awk '{out=""; for (i=4; i<= NF; i++) out=out$i" "; print out}' | sed 's/ESSID:"\|"//g' | head -c -2
+exec = iwgetid -r
 interval = 10
 
 format-prefix = " "

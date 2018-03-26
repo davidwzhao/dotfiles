@@ -26,7 +26,10 @@ alt + bracketright
     playerctl -p spotify next
 
 Print
-    scrot /home/david/Pictures/Screenshots/%H%M_%d-%m-%Y.png
+    scrot /home/david/Pictures/Screenshots/%Y-%m-%d_%H%M.png
+
+shift + Print
+    scrot -s /home/david/Pictures/Screenshots/%Y-%m-%d_%H%M.png
 
 super + space
     rofi modi drun,run -show drun
