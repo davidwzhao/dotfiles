@@ -51,7 +51,7 @@ urxvt.keysym.Control-Tab: \033[27;5;9~
 urxvt.keysym.Control-ISO_Left_Tab: \033[27;6;9~
 
 !! rofi customisations
-rofi.key-run: SuperL+space
+! rofi.key-run: SuperL+space
 rofi.disable-history: false
 rofi.fuzzy: true
 
