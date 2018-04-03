@@ -34,6 +34,9 @@ set colorcolumn=80
 " Line wrap by word
 set linebreak
 
+" Scroll offset keeps n context lines on screen
+set scrolloff=5
+
 " Turn on search highlighting
 set hlsearch
 
