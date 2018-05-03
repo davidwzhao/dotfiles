@@ -109,9 +109,6 @@ complete -cf sudo
 # connect to wifi on startup
 sudo netctl start wlp8s0-ZD
 
-# add souffle to path
-export PATH=$PATH:/home/david/Docs/souffle/src
-
 # start xorg on login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx

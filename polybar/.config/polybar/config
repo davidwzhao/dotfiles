@@ -139,7 +139,6 @@ format = <label>
 
 format-prefix = " "
 format-underline = ${colors.magenta}
-format-padding = 2
 format-background = ${colors.modulebg}
 
 [module/time]

@@ -29,7 +29,7 @@ endif
 let g:tex_flavor='latex'
 
 " Line at column 80
-set colorcolumn=80
+" set colorcolumn=80
 
 " Line wrap by word
 set linebreak

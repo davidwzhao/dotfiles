@@ -60,13 +60,13 @@
 
             <item label="Restart">
                 <action name="Execute">
-                    <execute>sudo shutdown --reboot 0</execute>
+                    <execute>systemctl reboot</execute>
                 </action>
             </item>
 
             <item label="Shutdown">
                 <action name="Execute">
-                    <execute>sudo shutdown --poweroff 0</execute>
+                    <execute>systemctl poweroff</execute>
                 </action>
             </item>
         </menu>
