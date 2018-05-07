@@ -1,6 +1,6 @@
 [global/wm]
-;margin-top =
-;margin-bottom = 2
+margin-top = 0
+margin-bottom = 0
 ;
 
 [settings]
@@ -26,7 +26,7 @@ cyan = ${xrdb:color6}
 
 [bar/top]
 width = 100%
-height = 40
+height = 36
 offset-x = 0%
 offset-y= 0%
 ;fixed-center =
@@ -35,11 +35,11 @@ override-redirect = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = Fira Code Retina:size=12:;1
-font-1 = MaterialIcons:size=12:;2
+font-0 = Fira Code Retina:size=10:;2
+font-1 = MaterialIcons:size=10:;3
 font-2 = Wuncon Siji:pixelsize=8:;2
 
-modules-left =  xworkspaces xwindow
+modules-left =  xworkspaces xwindow i3
 modules-center = time date
 modules-right = spotify volume dropbox memory temp filesystem ssid
 
@@ -53,7 +53,7 @@ modules-right = spotify volume dropbox memory temp filesystem ssid
 click-right = xdotool key super+m
 ;click-right = "thunar &"
 
-underline-size = 4
+overline-size = 2
 
 border-size = 0
 border-color = #00000000
@@ -81,15 +81,15 @@ format-volume-foreground = ${colors.fg}
 
 label-muted =  ───
 
-format-volume-underline = ${colors.blue}
-format-muted-underline = ${colors.blue}
+format-volume-overline = ${colors.blue}
+format-muted-overline = ${colors.blue}
 
 [module/xwindow]
 type = internal/xwindow
 interval = 1
 label = %title:0:50:...%
 
-format-underline = ${colors.orange}
+format-overline = ${colors.orange}
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -97,37 +97,81 @@ type = internal/xworkspaces
 enable-click = true
 enable-scroll = false
 
-icon-0 = 1;
-icon-1 = 2;
-icon-2 = 3;
-icon-3 = 4;
-icon-4 = 5;
-icon-5 = 6;
+; icon-0 = 1;
+; icon-1 = 2;
+; icon-2 = 3;
+; icon-3 = 4;
+; icon-4 = 5;
+; icon-5 = 6;
+
+icon-0 = 1;1
+icon-1 = 2;2
+icon-2 = 3;3
+icon-3 = 4;4
+icon-4 = 5;5
+icon-5 = 6;6
+icon-6 = 7;7
+icon-7 = 8;8
+icon-8 = 9;9
+icon-9 = 10;10
 
 ; properties of current workspace
-label-active = 
+label-active = %icon%
 label-active-padding = 1
 label-active-foreground = ${colors.fg}
-;label-active-background = ${colors.bg}
-label-active-underline = ${colors.orange}
+label-active-background = ${colors.bg}
+label-active-overline = ${colors.orange}
 
-;label-occupied = %icon%
-;label-occupied-padding = 1
-;label-occupied-foreground = ${colors.fg}
-;label-occupied-background = ${colors.bg}
-;label-occupied-underline = ${colors.focused}
+label-occupied = %icon%
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.fg}
+label-occupied-background = ${colors.bg}
+label-occupied-overline = ${colors.focused}
 
 label-urgent = %icon%
 label-urgent-padding = 1
 label-urgent-foreground = ${colors.fg}
-;label-urgent-background = ${colors.bg}
-label-urgent-underline = ${colors.urgent}
+label-urgent-background = ${colors.bg}
+label-urgent-overline = ${colors.urgent}
 
 label-empty = %icon%
 label-empty-padding = 1
 label-empty-foreground = ${colors.fg}
 
 format-padding = 0
+
+[module/i3]
+type = internal/i3
+interval = 1
+
+format = <label-state><label-mode>
+
+; i3 mode
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-margin = 0
+label-mode-background = ${colors.bg}
+label-mode-overline = ${colors.yellow}
+
+label-focused =
+label-focused-padding = 0
+label-focused-margin = 0
+label-focused-overline = ${colors.yellow}
+
+label-unfocused =
+label-unfocused-padding = 0
+label-unfocused-margin = 0
+label-unfocused-overline = ${colors.yellow}
+
+label-visible =
+label-visible-padding = 0
+label-visible-margin = 0
+label-visible-overline = ${colors.yellow}
+
+label-urgent =
+label-urgent-padding = 0
+label-urgent-margin = 0
+label-urgent-overline = ${colors.yellow}
 
 [module/date]
 type = internal/date
@@ -138,7 +182,7 @@ label = %date%
 format = <label>
 
 format-prefix = " "
-format-underline = ${colors.magenta}
+format-overline = ${colors.magenta}
 format-background = ${colors.modulebg}
 
 [module/time]
@@ -155,7 +199,7 @@ format = <label>
 ;format-foreground = #075859
 
 format-prefix = " "
-format-underline = ${colors.magenta}
+format-overline = ${colors.magenta}
 
 [module/memory]
 type = internal/memory
@@ -165,7 +209,7 @@ format = <label>
 label = "%percentage_used%"
 
 format-prefix = " "
-format-underline = ${colors.cyan}
+format-overline = ${colors.cyan}
 
 [module/temp]
 type = internal/temperature
@@ -182,7 +226,7 @@ label-warn = "%temperature%"
 label-warn-foreground = ${colors.orange}
 
 format-prefix = " "
-format-underline = ${colors.cyan}
+format-overline = ${colors.cyan}
 
 [module/filesystem]
 type = internal/fs
@@ -194,8 +238,8 @@ format-mounted = <label-mounted>
 label-mounted = " %percentage_used%"
 label-unmounted = " %mountpoint% ---"
 
-format-mounted-underline = ${colors.cyan}
-format-unmounted-underline = ${colors.cyan}
+format-mounted-overline = ${colors.cyan}
+format-unmounted-overline = ${colors.cyan}
 
 [module/spotify]
 type = custom/script
@@ -203,7 +247,7 @@ exec =  ~/bin/spotify.sh
 interval = 0.1
 click-left = playerctl -p spotify play-pause
 
-format-underline = ${colors.blue}
+format-overline = ${colors.blue}
 
 [module/dropbox]
 type = custom/script
@@ -211,7 +255,7 @@ exec =  ~/bin/dropbox.sh
 interval = 1
 
 format-prefix = " "
-format-underline = ${colors.cyan}
+format-overline = ${colors.cyan}
 
 [module/ssid]
 type = custom/script
@@ -222,6 +266,6 @@ exec = iwgetid -r
 interval = 10
 
 format-prefix = " "
-format-underline = ${colors.green}
+format-overline = ${colors.green}
 
 ; vim:ft=dosini

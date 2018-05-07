@@ -31,5 +31,5 @@ Print
 shift + Print
     scrot -s /home/david/Pictures/Screenshots/%Y-%m-%d_%H%M.png
 
-super + space
-    rofi modi drun,run -show drun
+# super + space
+#     rofi modi drun,run -show drun
