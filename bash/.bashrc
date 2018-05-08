@@ -41,16 +41,16 @@ esac
 # Set colours
 BLACK=$(tput setaf 0)
 WHITE=$(tput setaf 7)
-RED=$(tput setaf 160)
-GREEN=$(tput setaf 64)
-YELLOW=$(tput setaf 136)
-ORANGE=$(tput setaf 166)
-BLUE=$(tput setaf 33)
-VIOLET=$(tput setaf 61)
-MAGENTA=$(tput setaf 125)
-CYAN=$(tput setaf 37)
+RED=$(tput setaf 1)
+GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 3)
+ORANGE=$(tput setaf 9)
+BLUE=$(tput setaf 4)
+VIOLET=$(tput setaf 5)
+MAGENTA=$(tput setaf 13)
+CYAN=$(tput setaf 12)
 PINK=$(tput setaf 201)
-GREY=$(tput setaf 242)
+GREY=$(tput setaf 8)
 BOLD=$(tput bold)
 UNDERLINE=$(tput smul)
 NORMAL=$(tput sgr0)
@@ -107,9 +107,9 @@ export EDITOR=vim
 complete -cf sudo
 
 # connect to wifi on startup
-sudo netctl start wlp8s0-ZD
+# sudo netctl start wlp8s0-ZD
 
 # start xorg on login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-fi
+# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#     startx
+# fi
