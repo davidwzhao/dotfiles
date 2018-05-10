@@ -33,6 +33,7 @@ urxvt.termName: rxvt-unicode-256color
 urxvt.font: xft:Fira Code Retina:size=9,\
             xft:Material Icons:size=6
 urxvt.letterSpace: 0
+urxvt.lineSpace: 2
 
 urxvt.fading: 0
 urxvt.dynamicColors: on
