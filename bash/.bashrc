@@ -106,10 +106,12 @@ export EDITOR=vim
 # enable tab completion for sudo
 complete -cf sudo
 
-# connect to wifi on startup
-# sudo netctl start wlp8s0-ZD
-
 # start xorg on login
-# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-#     startx
-# fi
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    startx
+fi
+
+# open command like in macOS
+function open() {
+    bash -c "xdg-open "$@" 2> /dev/null &"
+}

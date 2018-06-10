@@ -35,8 +35,8 @@ override-redirect = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = Fira Code Retina:size=10:;2
-font-1 = MaterialIcons:size=10:;3
+font-0 = Fira Code Retina:size=10:;4
+font-1 = MaterialIcons:size=10:;5
 font-2 = Wuncon Siji:pixelsize=8:;2
 
 modules-left =  xworkspaces xwindow i3
