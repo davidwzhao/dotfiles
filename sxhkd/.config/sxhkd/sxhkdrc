@@ -25,11 +25,11 @@ alt + bracketleft
 alt + bracketright
     playerctl -p spotify next
 
-Print
-    scrot /home/david/Pictures/Screenshots/%Y-%m-%d_%H%M.png
+alt + shift + 3
+    maim "/home/david/Pictures/Screenshots/$(date +%Y-%m-%d_%H%M).png"
 
-shift + Print
-    scrot -s /home/david/Pictures/Screenshots/%Y-%m-%d_%H%M.png
+alt + shift + 4
+    maim -s "/home/david/Pictures/Screenshots/$(date +%Y-%m-%d_%H%M).png"
 
 # super + space
 #     rofi modi drun,run -show drun

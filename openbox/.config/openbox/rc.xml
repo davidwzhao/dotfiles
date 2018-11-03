@@ -251,7 +251,10 @@
       </action>
     </keybind>
     <keybind key="W-d">
-      <action name="ToggleShowDesktop"/>
+        <!--<action name="ToggleShowDesktop"/> -->
+        <action name="Execute">
+            <command>rofi -modi drun,run -show drun</command>
+        </action>
     </keybind>
     
     <!-- Keybindings for windows -->

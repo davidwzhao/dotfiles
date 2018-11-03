@@ -226,7 +226,9 @@ label-warn = "%temperature%"
 label-warn-foreground = ${colors.orange}
 
 format-prefix = " "
+format-warn-prefix = " "
 format-overline = ${colors.cyan}
+format-warn-overline = ${colors.cyan}
 
 [module/filesystem]
 type = internal/fs

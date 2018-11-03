@@ -3,5 +3,6 @@ sh ~/.fehbg &
 polybar top &
 compton &
 sxhkd &
+xrdb ~/.Xresources &
 
 sleep 2 && redshift -l -34:151 -t 6500K:3400K &

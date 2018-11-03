@@ -45,9 +45,10 @@ set clipboard=unnamedplus
 
 " Enable mouse support
 set mouse=a
+set ttymouse=sgr        " Handle mouse correctly after column 220
 
 " Enable spell check
-" setlocal spell spelllang=en_us
+setlocal spell spelllang=en_us
 
 " Enable persistent undo
 set undofile

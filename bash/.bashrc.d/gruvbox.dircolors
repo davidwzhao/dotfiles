@@ -57,6 +57,7 @@ TERM screen-w
 TERM screen.Eterm
 TERM screen.rxvt
 TERM screen.linux
+TERM st-256color
 TERM terminator
 TERM vt100
 TERM xterm
@@ -175,7 +176,7 @@ EXEC  1;30;32
 .fli 01;35
 .flv 01;35
 .gl 01;35
-.dl 01;35
+#.dl 01;35
 .xcf 01;35
 .xwd 01;35
 .yuv 01;35

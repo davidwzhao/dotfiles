@@ -48,10 +48,24 @@ urxvt.perl-ext-common: "default, -searchable-scrollback"
 urxvt.iso14755: false
 urxvt.iso14755_52: false
 ! map ctrl + tab properly
-urxvt.keysym.Control-Tab: \033[27;5;9~
-urxvt.keysym.Control-ISO_Left_Tab: \033[27;6;9~
+! urxvt.keysym.Control-Tab: \033[27;5;9~
+! urxvt.keysym.Control-ISO_Left_Tab: \033[27;6;9~
 
-!! rofi customisations
+!! st customizations =============================================
+st.font:			    Fira Code:size=8.5
+! st.bold_font:			0
+! st.background:			#131415
+! st.foreground:			#A3BAD0
+st.cursorColor:			#ebdbb2
+st.internalBorder:      64
+st.termname:			st-256color
+st.shell:			    /bin/sh
+st.bellvolume:			100
+st.tabspaces:			8
+st.chscale:			    1.1
+st.cwscale:			    1.05
+
+!! rofi customisations ==========================================
 ! rofi.key-run: SuperL+space
 rofi.disable-history: false
 rofi.fuzzy: true
@@ -65,17 +79,17 @@ rofi.color-enabled: true
 !                   bg          fg          bg-alt      hl-bg       hl-fg
 ! rofi.color-normal:  #282828,    #859ba3,    #282828,    #268bd2,    #202020
 ! rofi.color-normal:  #282828,    #ebdbb2,    #282828,    #83a598,    #282828
-rofi.color-normal:  #ebdbb2,    #282828,    #ebdbb2,    #83a598,    #282828
-rofi.color-active:  #ebdbb2,    #282828,    #ebdbb2,    #83a598,    #282828
+rofi.color-normal:  #ebdbb2,    #282828,    #ebdbb2,    #d3869b,    #282828
+rofi.color-active:  #ebdbb2,    #282828,    #ebdbb2,    #d3869b,    #282828
 !                   bg          border      separator
-rofi.color-window:  #ebdbb2,    #404040,    #404040
+rofi.color-window:  #ebdbb2,    #d79921,    #404040
 rofi.opacity: 80
 
 rofi.lines: 10
 rofi.fixed-num-lines: true
 rofi.width: 20
 rofi.location: 0
-rofi.padding: 10
+rofi.padding: 20
 rofi.fullscreen: false
 rofi.sidebar-mode: false
 rofi.monitor: 0
@@ -85,7 +99,7 @@ rofi.bw: 2
 
 
 !! Display dpi
-Xft.dpi: 120
+Xft.dpi: 122
 Xcursor.size: 32
 
 !! Xft font rendering
