@@ -1,5 +1,25 @@
 !! Import colorscheme
-#include ".Xresources.d/gruvbox-dark.xresources"
+#include ".Xresources.d/lovelace.xresources"
+
+!! Set colors
+*background:    S_background
+*foreground:    S_foreground
+*color0:        S_black
+*color8:        S_darkgrey
+*color1:        S_darkred
+*color9:        S_red
+*color2:        S_darkgreen
+*color10:       S_green
+*color3:        S_darkyellow
+*color11:       S_yellow
+*color4:        S_darkblue
+*color12:       S_blue
+*color5:        S_darkmagenta
+*color13:       S_magenta
+*color6:        S_darkcyan
+*color14:       S_cyan
+*color7:        S_lightgrey
+*color15:       S_white
 
 
 !! My own customisations
@@ -76,13 +96,13 @@ rofi.separator-style: solid
 rofi.hide-scrollbar: true
 
 rofi.color-enabled: true
-!                   bg          fg          bg-alt      hl-bg       hl-fg
+!                   bg              fg              bg-alt          hl-bg       hl-fg
 ! rofi.color-normal:  #282828,    #859ba3,    #282828,    #268bd2,    #202020
 ! rofi.color-normal:  #282828,    #ebdbb2,    #282828,    #83a598,    #282828
-rofi.color-normal:  #ebdbb2,    #282828,    #ebdbb2,    #d3869b,    #282828
-rofi.color-active:  #ebdbb2,    #282828,    #ebdbb2,    #d3869b,    #282828
-!                   bg          border      separator
-rofi.color-window:  #ebdbb2,    #d79921,    #404040
+rofi.color-normal:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
+rofi.color-active:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
+!                   bg              border          separator
+rofi.color-window:  S_background,   S_darkgrey,     S_darkgrey
 rofi.opacity: 80
 
 rofi.lines: 10

@@ -10,7 +10,7 @@ format-background = ${colors.modulebg}
 [colors]
 fg = ${xrdb:foreground}
 bg = ${xrdb:background}
-modulebg = #282828
+modulebg = ${xrdb:background}
 
 focused = #606060
 urgent = ${xrdb:color9}
@@ -35,9 +35,9 @@ override-redirect = false
 background = ${colors.bg}
 foreground = ${colors.fg}
 
-font-0 = Fira Code Retina:size=10:;4
-font-1 = MaterialIcons:size=10:;5
-font-2 = Wuncon Siji:pixelsize=8:;2
+font-0 = Fira Code Retina:size=10:;3
+font-1 = MaterialIcons:size=10:;4
+font-2 = Wuncon Siji:pixelsize=8:;1
 
 modules-left =  xworkspaces xwindow i3
 modules-center = time date
@@ -50,7 +50,7 @@ modules-right = spotify volume dropbox memory temp filesystem ssid
 ;tray-detached = false
 
 ;open menu on right click
-click-right = xdotool key super+m
+;click-right = xdotool key super+m
 ;click-right = "thunar &"
 
 overline-size = 2
@@ -188,7 +188,7 @@ format-background = ${colors.modulebg}
 [module/time]
 type = internal/date
 interval = 1
-time = "%I:%M %P"
+time = "%OI:%M %P"
 
 label = %time%
 format = <label>

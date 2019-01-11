@@ -11,7 +11,7 @@ set background=dark
 " let g:solarized_degrade=0
 " let g:solarized_contrast="high"
 " let g:solarized_visibility="high"
-colorscheme gruvbox
+colorscheme noctu
  
 " Tabs and stuff
 set shiftwidth=4        " Size of tab when using >> or <<
