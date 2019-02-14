@@ -71,24 +71,26 @@ if exists("syntax_on")
 
   "}}}
   " Generic syntax {{{
-  hi Delimiter       ctermfg=7
+  hi Delimiter       ctermfg=5
   hi Comment         ctermfg=8
   hi Underlined      ctermfg=3   cterm=underline
   hi Type            ctermfg=3
   hi String          ctermfg=4
-  hi Keyword         ctermfg=11
+  hi Keyword         ctermfg=12
   hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
-  hi Function        ctermfg=3
+  hi Function        ctermfg=1
   hi Identifier      ctermfg=9   cterm=NONE
-  hi Statement       ctermfg=11
+  hi Statement       ctermfg=14
   hi Constant        ctermfg=5
   hi Number          ctermfg=2
-  hi Boolean         ctermfg=3
+  hi Boolean         ctermfg=2
   hi Special         ctermfg=13
   hi Ignore          ctermfg=0
   hi PreProc         ctermfg=4   cterm=NONE
   hi! link Operator  Delimiter
   hi! link Error     ErrorMsg
+
+  hi StorageClass    ctermfg=11
 
   "}}}
   " HTML {{{
@@ -140,7 +142,7 @@ if exists("syntax_on")
   hi! link markdownUrl                markdownLinkText
   hi! link markdownAutomaticLink      markdownLinkText
   hi! link markdownCodeBlock          String
-  hi markdownCode                     cterm=bold
+  hi markdownCode                     ctermfg=2
   hi markdownBold                     cterm=bold
   hi markdownItalic                   cterm=underline
 
@@ -250,6 +252,14 @@ if exists("syntax_on")
   hi! link bladeEchoDelim  PreProc
 
   "}}}
+  " C: {{{
+  hi cOperator  ctermfg=13
+  hi! link cppOperator cOperator
+
+  " hi cStructure ctermfg=11
+  " hi! link cppStructure cStructure
+
+  " }}}
 
   " vim: fdm=marker:sw=2:sts=2:et
 
