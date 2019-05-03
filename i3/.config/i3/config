@@ -228,4 +228,4 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id compton
 exec --no-startup-id sxhkd
 exec --no-startup-id "redshift -l -34:151 -t 6500K:3400K"
-exec --no-startup-id "sleep 1 && polybar top"
+exec --no-startup-id "polybar top"

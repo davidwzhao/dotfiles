@@ -82,7 +82,7 @@ TERM xterm-debian
 NORMAL 0;38;15                # no color code at all
 #FILE 00                        # regular file: use no color at all
 RESET 0                         # reset to "normal" color
-DIR 1;34                        # directory
+DIR 1;36                        # directory
 LINK 01;35                 # symbolic link. (If you set this to 'target' instead of a
                                 # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00                # regular file with more than one link
@@ -100,7 +100,7 @@ OTHER_WRITABLE 30;42            # dir that is other-writable (o+w) and not stick
 STICKY 37;44                    # dir with the sticky bit set (+t) and not other-writable
 
 # This is for files with execute permission:
-EXEC  1;30;32
+EXEC  1;30;33
 
 # archives or compressed (bright red)
 .tar 01;31

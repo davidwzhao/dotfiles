@@ -4,7 +4,7 @@ m=$(playerctl -p spotify status 2>&1)
 
 ret=""
 
-if [[ $m == *"Connection"* ]] || [[ $m == *"Not available"* ]] ; then
+if [[ $m == *"Connection"* ]] || [[ $m == *"Not available"* ]] || [[ $m == *"No players found"* ]]; then
     :
 else
     artist=$(playerctl -p spotify metadata artist)

@@ -72,25 +72,26 @@ urxvt.iso14755_52: false
 ! urxvt.keysym.Control-ISO_Left_Tab: \033[27;6;9~
 
 !! st customizations =============================================
-st.font:			    Fira Code:size=8.5
+! st.font:			    Fira Code:size=8.5
+st.font:			    Iosevka:size=11
 ! st.bold_font:			0
 ! st.background:			#131415
 ! st.foreground:			#A3BAD0
 st.cursorColor:			#ebdbb2
-st.internalBorder:      64
+st.internalBorder:      48
 st.termname:			st-256color
 st.shell:			    /bin/sh
 st.bellvolume:			100
 st.tabspaces:			8
 st.chscale:			    1.1
-st.cwscale:			    1.05
+st.cwscale:			    1.1
 
 !! rofi customisations ==========================================
 ! rofi.key-run: SuperL+space
 rofi.disable-history: false
 rofi.fuzzy: true
 
-rofi.font: Fira Code Retina 12
+rofi.font: Iosevka 14
 rofi.line-margin: 5
 rofi.separator-style: solid
 rofi.hide-scrollbar: true
@@ -119,7 +120,7 @@ rofi.bw: 2
 
 
 !! Display dpi
-Xft.dpi: 122
+Xft.dpi: 120
 Xcursor.size: 32
 
 !! Xft font rendering

@@ -113,5 +113,23 @@ fi
 
 # open command like in macOS
 function open() {
-    bash -c "xdg-open "$@" 2> /dev/null &"
+    for arg in "$@"; do
+        if [[ "$arg" == "-"* ]]; then
+            xdg-open "$@"
+            return
+        fi
+    done
+
+    # no options
+    for arg in "$@"; do
+        echo "$arg"
+        if [[ ! -f "$arg" ]]; then
+            xdg-open "$arg"
+        elif [[ $(xdg-mime query default $(xdg-mime query filetype "$arg") | wc -l) -le 0 ]]; then
+            echo "Error: no opener found for $arg, filetype $(xdg-mime query filetype "$arg")"
+        else
+            ( xdg-open "$arg" &> /dev/null ) &
+            disown
+        fi
+    done
 }
