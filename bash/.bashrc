@@ -113,6 +113,7 @@ fi
 
 # open command like in macOS
 function open() {
+    # if there are any options, pass them to xdg-open
     for arg in "$@"; do
         if [[ "$arg" == "-"* ]]; then
             xdg-open "$@"
@@ -123,10 +124,21 @@ function open() {
     # no options
     for arg in "$@"; do
         echo "$arg"
-        if [[ ! -f "$arg" ]]; then
+
+        # if it's a web url
+        if [[ "$arg" =~ .+://.* ]]; then
+            ( xdg-open "$arg" &> /dev/null ) &
+            disown
+
+        # if the file doesn't exist let xdg-open handle it
+        elif [[ ! -f "$arg" ]]; then
             xdg-open "$arg"
+
+        # if there is no registered opener application, print an error
         elif [[ $(xdg-mime query default $(xdg-mime query filetype "$arg") | wc -l) -le 0 ]]; then
             echo "Error: no opener found for $arg, filetype $(xdg-mime query filetype "$arg")"
+
+        # otherwise, all looks good so we'll open it in background :)
         else
             ( xdg-open "$arg" &> /dev/null ) &
             disown
