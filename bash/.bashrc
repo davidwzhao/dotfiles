@@ -102,6 +102,7 @@ fi
 # set default text editor
 export VISUAL=vim
 export EDITOR=vim
+export PAGER=less
 
 # enable tab completion for sudo
 complete -cf sudo
