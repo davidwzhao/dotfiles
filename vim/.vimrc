@@ -53,3 +53,9 @@ setlocal spell spelllang=en_us
 " Enable persistent undo
 set undofile
 set undodir=~/.vimundo
+
+" Disable modelines for security reasons
+set nomodeline
+
+" Set automatic line breaking
+" set tw=120

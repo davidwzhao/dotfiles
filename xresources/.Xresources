@@ -73,7 +73,7 @@ urxvt.iso14755_52: false
 
 !! st customizations =============================================
 ! st.font:			    Fira Code:size=8.5
-st.font:			    Iosevka:size=11
+st.font:			    SF Mono:style=Medium:size=11
 ! st.bold_font:			0
 ! st.background:			#131415
 ! st.foreground:			#A3BAD0
@@ -84,16 +84,18 @@ st.shell:			    /bin/sh
 st.bellvolume:			100
 st.tabspaces:			8
 st.chscale:			    1.1
-st.cwscale:			    1.1
+st.cwscale:			    1.0
 
 !! rofi customisations ==========================================
 ! rofi.key-run: SuperL+space
 rofi.disable-history: false
 rofi.fuzzy: true
+rofi.modi: drun,run
+rofi.show: drun
 
-rofi.font: Iosevka 14
-rofi.line-margin: 5
-rofi.separator-style: solid
+rofi.font: SF Pro Display Medium 15
+rofi.line-margin: 6
+rofi.separator-style: dotted
 rofi.hide-scrollbar: true
 
 rofi.color-enabled: true
@@ -112,7 +114,7 @@ rofi.width: 20
 rofi.location: 0
 rofi.padding: 20
 rofi.fullscreen: false
-rofi.sidebar-mode: false
+rofi.sidebar-mode: true
 rofi.monitor: 0
 
 ! border width
