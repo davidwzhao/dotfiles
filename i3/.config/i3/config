@@ -43,7 +43,7 @@ bindsym $mod+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec rofi
+bindsym $mod+d exec "rofi -show drun"
 
 
 # change focus
@@ -225,7 +225,7 @@ mode $powermenu {
 
 # autostart applications
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id compton
+exec --no-startup-id picom
 exec --no-startup-id sxhkd
 exec --no-startup-id "redshift -l -34:151 -t 6500K:3400K"
 exec --no-startup-id "polybar top"

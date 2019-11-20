@@ -59,3 +59,9 @@ set nomodeline
 
 " Set automatic line breaking
 " set tw=120
+
+" Set lisp syntax highlighting for *.clisp files
+autocmd BufNewFile,BufRead *.clisp set syntax=lisp
+
+" Set souffle syntax highlighting for *.dl files
+autocmd BufNewFile,BufRead *.dl set syntax=souffle

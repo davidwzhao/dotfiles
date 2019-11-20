@@ -65,7 +65,7 @@ module-margin-left = 1
 module-margin-right = 1
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
 master-soundcard = default
 master-mixer = PCM
@@ -221,8 +221,8 @@ hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
 format = <label>
 format-warn = <label-warn>
 
-label = "%temperature%"
-label-warn = "%temperature%"
+label = "%temperature-c%"
+label-warn = "%temperature-c%"
 label-warn-foreground = ${colors.orange}
 
 format-prefix = " "

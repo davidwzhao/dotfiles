@@ -78,7 +78,7 @@ st.font:			    SF Mono:style=Medium:size=11
 ! st.background:			#131415
 ! st.foreground:			#A3BAD0
 st.cursorColor:			#ebdbb2
-st.internalBorder:      48
+st.internalBorder:      56
 st.termname:			st-256color
 st.shell:			    /bin/sh
 st.bellvolume:			100
