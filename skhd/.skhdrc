@@ -70,13 +70,14 @@
 # default, test < cmd - return : open -na /Applications/Terminal.app
 
 # open terminal, blazingly fast compared to iTerm/Hyper
-alt - return : open -a /Applications/Utilities/Terminal.app
+# alt - return : open -a /Applications/Utilities/Terminal.app
+alt - return : open -a /Applications/kitty.app
 
 # open qutebrowser
 # cmd + shift - return : ~/Scripts/qtb.sh
 
 # close focused window
-alt - w : chunkc tiling::window --close
+# alt - w : chunkc tiling::window --close
 
 # focus window
 alt - h : chunkc tiling::window --focus west
@@ -208,12 +209,12 @@ alt - e : chunkc tiling::window --toggle split
 alt - q : chunkc tiling::window --toggle fade
 
 # float / unfloat window and center on screen
-alt - t : chunkc tiling::window --toggle float;\
+alt + shift - space : chunkc tiling::window --toggle float;\
           chunkc tiling::window --grid-layout 4:4:1:1:2:2
 
 # toggle sticky, float and resize to picture-in-picture size
-alt - s : chunkc tiling::window --toggle sticky;\
-          chunkc tiling::window --grid-layout 5:5:4:0:1:1
+# alt - s : chunkc tiling::window --toggle sticky;\
+#           chunkc tiling::window --grid-layout 5:5:4:0:1:1
 
 # float next window to be tiled
 shift + alt - t : chunkc set window_float_next 1
