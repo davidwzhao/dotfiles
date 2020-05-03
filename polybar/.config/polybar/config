@@ -36,8 +36,8 @@ background = ${colors.bg}
 foreground = ${colors.fg}
 
 font-0 = SF Mono:style=Semibold:size=11:;3
-font-1 = MaterialIcons:size=10:;4
-font-2 = Wuncon Siji:pixelsize=8:;1
+font-1 = MaterialIcons:size=13:;5
+font-2 = Wuncon Siji:pixelsize=11:;1
 
 modules-left =  xworkspaces xwindow i3
 modules-center = time date
@@ -256,7 +256,7 @@ type = custom/script
 exec =  ~/bin/mega-status.sh
 interval = 1
 
-format-prefix = " "
+format-prefix = " "
 format-overline = ${colors.cyan}
 
 [module/ssid]
