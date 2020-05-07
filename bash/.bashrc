@@ -79,13 +79,13 @@ fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}[\u@\h] [\w]\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
+# case "$TERM" in
+# xterm*|rxvt*)
+#     PS1="\[\e]0;${debian_chroot:+($debian_chroot)}[\u@\h] [\w]\a\]$PS1"
+#     ;;
+# *)
+#     ;;
+# esac
 
 # enable color support of ls and also add handy aliases
 DIRCOLORS="$HOME/.bashrc.d/gruvbox.dircolors"
@@ -107,7 +107,8 @@ export PAGER=less
 # enable tab completion for sudo
 complete -cf sudo
 
-# start xorg on login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-fi
+# mac specific env variables
+export BASH_SILENCE_DEPRECATION_WARNING=1
+export CLICOLOR=1
+
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

@@ -5,7 +5,7 @@ set number
 syntax on
 
 " Colorscheme
-set background=dark
+set background=light
 " let g:solarized_termcolors=256
 " let g:solarized_termtrans=1
 " let g:solarized_degrade=0
@@ -65,3 +65,7 @@ autocmd BufNewFile,BufRead *.clisp set syntax=lisp
 
 " Set souffle syntax highlighting for *.dl files
 autocmd BufNewFile,BufRead *.dl set syntax=souffle
+
+" Smoother vim scrolling on touchpad
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>

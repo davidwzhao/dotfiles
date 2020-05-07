@@ -5,7 +5,7 @@
 " --------------------------------------------------------------
 
 " Scheme setup {{{
-set background=dark
+set background=light
 hi! clear
 
 if exists("syntax_on")
