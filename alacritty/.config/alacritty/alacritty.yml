@@ -186,8 +186,8 @@ font:
 colors:
   # Default colors
   primary:
-    background: '0x1d1f28'
-    foreground: '0xfdfdfd'
+    background: '0x1a1a1a'
+    foreground: '0xc0c0c0'
 
     # Bright and dim foreground colors
     #
@@ -215,26 +215,50 @@ colors:
   #  background: '0x404040'
 
   # Normal colors
-  bright:
-    black:   '0x616478'
-    red:     '0xff4971'
-    green:   '0x18e3c8'
-    yellow:  '0xff8037'
-    blue:    '0x556fff'
-    magenta: '0xb043d1'
-    cyan:    '0x3fdcee'
-    white:   '0xbebec1'
+  # qualia:
+  normal:
+    black:   '0x454545'
+    red:     '0xefa6a2'
+    green:   '0x5accaf'
+    yellow:  '0xc8c874'
+    blue:    '0xccaced'
+    magenta: '0xf2a1c2'
+    cyan:    '0x74c3e4'
+    white:   '0xc0c0c0'
+
+  # lovelace
+  # normal:
+  #   black:   '0x454545'
+  #   red:     '0xefa6a2'
+  #   green:   '0x5accaf'
+  #   yellow:  '0xc8c874'
+  #   blue:    '0xccaced'
+  #   magenta: '0xf2a1c2'
+  #   cyan:    '0x74c3e4'
+  #   white:   '0xc0c0c0'
 
   # Bright colors
-  normal:
-    black:   '0x282a36'
-    red:     '0xf37f97'
-    green:   '0x5adecd'
-    yellow:  '0xf2a272'
-    blue:    '0x8897f4'
-    magenta: '0xc574dd'
-    cyan:    '0x79e6f3'
-    white:   '0xfdfdfd'
+  # qualia:
+  bright:
+    black:   '0x656565'
+    red:     '0xe0af85'
+    green:   '0x80c990'
+    yellow:  '0xa69460'
+    blue:    '0xa3b8ef'
+    magenta: '0xe6a3dc'
+    cyan:    '0x50cacd'
+    white:   '0x808080'
+
+  # lovelace:
+  # bright:
+  #   black:   '0x656565'
+  #   red:     '0xe0af85'
+  #   green:   '0x80c990'
+  #   yellow:  '0xa69460'
+  #   blue:    '0xa3b8ef'
+  #   magenta: '0xe6a3dc'
+  #   cyan:    '0x50cacd'
+  #   white:   '0x808080'
 
   # Dim colors
   #
