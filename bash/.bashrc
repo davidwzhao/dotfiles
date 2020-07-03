@@ -107,6 +107,9 @@ export VISUAL=vim
 export EDITOR=vim
 export PAGER=less
 
+# enable mouse support in less
+export LESS='--mouse -R -F -X'
+
 # enable tab completion for sudo
 complete -cf sudo
 

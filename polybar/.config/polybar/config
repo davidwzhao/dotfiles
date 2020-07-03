@@ -41,7 +41,7 @@ font-2 = Wuncon Siji:pixelsize=11:;1
 
 modules-left =  xworkspaces xwindow i3
 modules-center = time date
-modules-right = spotify volume mega memory temp filesystem ssid
+modules-right = spotify volume mega memory temp gputemp filesystem ssid
 
 ;tray-position = right
 ;tray-padding = 2
@@ -230,6 +230,27 @@ format-warn-prefix = " "
 format-overline = ${colors.cyan}
 format-warn-overline = ${colors.cyan}
 
+[module/gputemp]
+type = internal/temperature
+interval = 1
+
+thermal-zone = 0
+hwmon-path = /sys/devices/pci0000:00/0000:00:03.0/0000:03:00.0/hwmon/hwmon1/temp1_input
+; hwmon-path = /sys/devices/pci0000:00/0000:00:03.0/0000:03:00.0/hwmon/hwmon2/temp1_input
+
+format = <label>
+format-warn = <label-warn>
+
+label = "%temperature-c%"
+label-warn = "%temperature-c%"
+label-warn-foreground = ${colors.orange}
+warn-temperature = 90
+
+format-prefix = " "
+format-warn-prefix = " "
+format-overline = ${colors.cyan}
+format-warn-overline = ${colors.cyan}
+
 [module/filesystem]
 type = internal/fs
 interval = 10
@@ -257,17 +278,30 @@ exec =  ~/bin/mega-status.sh
 interval = 1
 
 format-prefix = " "
-format-overline = ${colors.cyan}
+format-overline = ${colors.blue}
 
-[module/ssid]
-type = custom/script
+; [module/ssid]
+; type = custom/script
 
 ;format = <label><exec>
 ;exec = iwconfig wlp8s0 | grep ESSID | awk '{out=""; for (i=4; i<= NF; i++) out=out$i" "; print out}' | sed 's/ESSID:"\|"//g' | head -c -2
-exec = iwgetid -r
-interval = 10
+; exec = iwgetid -r
+; interval = 10
+
+; format-prefix = " "
+; format-overline = ${colors.green}
+
+[module/ssid]
+type = internal/network
+interface = wlp8s0
+interval = 1
+accumulate-stats = true
+
+format-connected =  <label-connected>
+; label-connected = %essid%  %upspeed%  %downspeed%
+label-connected = %essid%
 
 format-prefix = " "
-format-overline = ${colors.green}
+format-connected-overline = ${colors.green}
 
 ; vim:ft=dosini
