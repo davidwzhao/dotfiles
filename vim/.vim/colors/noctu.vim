@@ -99,12 +99,12 @@ if exists("syntax_on")
   hi htmlArg                  ctermfg=10
   hi htmlH1                   cterm=bold
   hi htmlBold                 cterm=bold
-  hi htmlItalic               cterm=underline
+  hi htmlItalic               cterm=italic
   hi htmlUnderline            cterm=underline
-  hi htmlBoldItalic           cterm=bold,underline
+  hi htmlBoldItalic           cterm=bold,italic
   hi htmlBoldUnderline        cterm=bold,underline
   hi htmlUnderlineItalic      cterm=underline
-  hi htmlBoldUnderlineItalic  cterm=bold,underline
+  hi htmlBoldUnderlineItalic  cterm=bold,underline,italic
   hi! link htmlLink           Underlined
   hi! link htmlEndTag         htmlTag
 
@@ -144,7 +144,7 @@ if exists("syntax_on")
   hi! link markdownCodeBlock          String
   hi markdownCode                     ctermfg=2
   hi markdownBold                     cterm=bold
-  hi markdownItalic                   cterm=underline
+  hi markdownItalic                   cterm=italic
 
   "}}}
   " Ruby {{{
@@ -255,6 +255,10 @@ if exists("syntax_on")
   " C: {{{
   hi cOperator  ctermfg=13
   hi! link cppOperator cOperator
+
+  " }}}
+  " TeX: {{{
+  hi texItalStyle cterm=italic
 
   " hi cStructure ctermfg=11
   " hi! link cppStructure cStructure

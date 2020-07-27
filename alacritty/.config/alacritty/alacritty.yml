@@ -247,11 +247,11 @@ colors:
   # qualia:
   normal:
     black:   '0x454545'
-    red:     '0xefa6a2'
+    red:     '0xff9894'
     green:   '0x5accaf'
     yellow:  '0xc8c874'
-    blue:    '0xccaced'
-    magenta: '0xf2a1c2'
+    blue:    '0xb5b5fd'
+    magenta: '0xe2a9d0'
     cyan:    '0x74c3e4'
     white:   '0xc0c0c0'
 
@@ -273,8 +273,8 @@ colors:
     red:     '0xe0af85'
     green:   '0x80c990'
     yellow:  '0xa69460'
-    blue:    '0xa3b8ef'
-    magenta: '0xe6a3dc'
+    blue:    '0x93c3f2'
+    magenta: '0xd6b1ea'
     cyan:    '0x50cacd'
     white:   '0x808080'
 
