@@ -4,14 +4,14 @@
 #define S_background  #262727
 #define S_foreground  #f0d3c9
 #define S_black       #262727
-#define S_red         #de9dac
+#define S_red         #de8d9c
 #define S_green       #9ddeaf
 #define S_yellow      #dac878
 #define S_blue        #9dacde
 #define S_magenta     #af9dde
 #define S_cyan        #9dccde
-#define S_lightgrey   #535555
-#define S_darkgrey    #393b3b
+#define S_lightgrey   #838585
+#define S_darkgrey    #494b4b
 #define S_darkred     #efaf9d
 #define S_darkgreen   #9deeb0
 #define S_darkyellow  #dfd373
