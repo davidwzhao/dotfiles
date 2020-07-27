@@ -16,8 +16,8 @@ if exists("syntax_on")
 
   "}}}
   " Vim UI {{{
-  hi Normal              ctermfg=7
-  hi Cursor              ctermfg=7     ctermbg=1
+  hi Normal              ctermfg=15
+  hi Cursor              ctermfg=15     ctermbg=1
   hi CursorLine          ctermbg=0     cterm=NONE
   hi MatchParen          ctermfg=7     ctermbg=NONE  cterm=underline
   hi Pmenu               ctermfg=15    ctermbg=0
@@ -80,7 +80,7 @@ if exists("syntax_on")
   hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
   hi Function        ctermfg=1
   hi Identifier      ctermfg=9   cterm=NONE
-  hi Statement       ctermfg=14
+  hi Statement       ctermfg=6
   hi Constant        ctermfg=5
   hi Number          ctermfg=2
   hi Boolean         ctermfg=2

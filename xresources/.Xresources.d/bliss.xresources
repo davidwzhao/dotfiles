@@ -1,9 +1,9 @@
 ! Bliss colour scheme
 ! From https://www.reddit.com/r/unixporn/comments/hy8h94/openbox_bliss/
 
-#define S_background  #262727
-#define S_foreground  #f0d3c9
-#define S_black       #262727
+#define S_background  #1a1b1b
+#define S_foreground  #f0e0e5
+#define S_black       #1a1b1b
 #define S_red         #de8d9c
 #define S_green       #9ddeaf
 #define S_yellow      #dac878
@@ -18,4 +18,4 @@
 #define S_darkblue    #9fa7fe
 #define S_darkmagenta #d09dde
 #define S_darkcyan    #99d8df
-#define S_white       #f0d3c9
+#define S_white       #f0e0e5

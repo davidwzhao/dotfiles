@@ -1,5 +1,5 @@
 !! Import colorscheme
-#include ".Xresources.d/qualia.xresources"
+#include ".Xresources.d/forest-night.xresources"
 
 !! Set colors
 *background:    S_background
