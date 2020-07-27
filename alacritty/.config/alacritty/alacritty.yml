@@ -184,6 +184,35 @@ font:
 
 # Colors (Tomorrow Night Bright)
 colors:
+
+  # bliss
+  # Default colors
+  # primary:
+  #   background: '0x262727'
+  #   foreground: '0xf0d3c9'
+
+  # Normal colors
+  # normal:
+  #   black:   '0x262727'
+  #   red:     '0xde9dac'
+  #   green:   '0x9ddeaf'
+  #   yellow:  '0xdac878'
+  #   blue:    '0x9dacde'
+  #   magenta: '0xaf9dde'
+  #   cyan:    '0x9dccde'
+  #   white:   '0x535555'
+
+  # Bright colors
+  # bright:
+  #   black:   '0x393b3b'
+  #   red:     '0xefaf9d'
+  #   green:   '0x9deeb0'
+  #   yellow:  '0xdfd373'
+  #   blue:    '0x9fa7fe'
+  #   magenta: '0xd09dde'
+  #   cyan:    '0x99d8df'
+  #   white:   '0xf0d3c9'
+
   # Default colors
   primary:
     background: '0x1a1a1a'
