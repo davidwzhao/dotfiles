@@ -88,37 +88,37 @@ st.cwscale:			    1.0
 
 !! rofi customisations ==========================================
 ! rofi.key-run: SuperL+space
-rofi.disable-history: false
-rofi.fuzzy: true
-rofi.modi: drun,run
-rofi.show: drun
-
-rofi.font: SF Pro Display Medium 15
-rofi.line-margin: 6
-rofi.separator-style: dotted
-rofi.hide-scrollbar: true
-
-rofi.color-enabled: true
-!                   bg              fg              bg-alt          hl-bg       hl-fg
-! rofi.color-normal:  #282828,    #859ba3,    #282828,    #268bd2,    #202020
-! rofi.color-normal:  #282828,    #ebdbb2,    #282828,    #83a598,    #282828
-rofi.color-normal:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
-rofi.color-active:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
-!                   bg              border          separator
-rofi.color-window:  S_background,   S_darkgrey,     S_darkgrey
-rofi.opacity: 80
-
-rofi.lines: 10
-rofi.fixed-num-lines: true
-rofi.width: 20
-rofi.location: 0
-rofi.padding: 20
-rofi.fullscreen: false
-rofi.sidebar-mode: true
-rofi.monitor: 0
-
-! border width
-rofi.bw: 2
+!! rofi.disable-history: false
+!! rofi.fuzzy: true
+!! rofi.modi: drun,run
+!! rofi.show: drun
+!! 
+!! rofi.font: SF Pro Display Medium 15
+!! rofi.line-margin: 6
+!! rofi.separator-style: dotted
+!! rofi.hide-scrollbar: true
+!! 
+!! rofi.color-enabled: true
+!! !                   bg              fg              bg-alt          hl-bg       hl-fg
+!! ! rofi.color-normal:  #282828,    #859ba3,    #282828,    #268bd2,    #202020
+!! ! rofi.color-normal:  #282828,    #ebdbb2,    #282828,    #83a598,    #282828
+!! rofi.color-normal:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
+!! rofi.color-active:  S_background,   S_foreground,   S_background,   S_darkyellow,  S_black
+!! !                   bg              border          separator
+!! rofi.color-window:  S_background,   S_darkgrey,     S_darkgrey
+!! rofi.opacity: 80
+!! 
+!! rofi.lines: 10
+!! rofi.fixed-num-lines: true
+!! rofi.width: 20
+!! rofi.location: 0
+!! rofi.padding: 20
+!! rofi.fullscreen: false
+!! rofi.sidebar-mode: true
+!! rofi.monitor: 0
+!! 
+!! ! border width
+!! rofi.bw: 2
 
 
 !! Display dpi

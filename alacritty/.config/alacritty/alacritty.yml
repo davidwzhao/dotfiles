@@ -298,7 +298,7 @@ colors:
   # forest-night
   primary:
     foreground:     '0xc1cacc'
-    background:     '0x222d33'
+    background:     '0x222d28'
 
   # Normal colors
   normal:

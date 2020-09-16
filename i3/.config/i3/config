@@ -195,8 +195,8 @@ set $darkgrey     #484848
 
 # set colours
 # class                     border      background      text        indicator       child_border
-client.focused              $bg         $darkgrey       $fg         $blue           $darkblue
-client.unfocused            $bg         $bg             $fg         $blue           $bg 
+client.focused              $bg         $darkgrey       $fg         $yellow         $darkyellow
+client.unfocused            $bg         $bg             $fg         $yellow         $bg 
 
 # set border size and disable titlebar
 for_window [class="^.*"] border pixel 2
@@ -224,6 +224,7 @@ mode $powermenu {
 
 
 # autostart applications
+exec --no-startup-id "wal -R"
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id picom
 exec --no-startup-id sxhkd
