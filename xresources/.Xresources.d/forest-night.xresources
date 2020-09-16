@@ -2,7 +2,7 @@
 ! From https://www.reddit.com/r/unixporn/comments/by66r3/ocvim_forest_night_comfortable_pleasant_vim_color/
 
 #define S_foreground      #c1cacc
-#define S_background      #222d33
+#define S_background      #222d28
 #define S_black           #465258
 #define S_red             #e68183
 #define S_green           #a7c080
