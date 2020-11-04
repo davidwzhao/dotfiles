@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# echo "megacmd is broken again :("
+# exit 0
+
 transfers=$(mega-transfers --show-syncs --summary)
 
 ret=""

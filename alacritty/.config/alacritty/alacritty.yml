@@ -295,32 +295,59 @@ colors:
   #   cyan:    '0x50cacd'
   #   white:   '0x808080'
 
-  # forest-night
+  # # forest-night
+  # primary:
+  #   foreground:     '0xc1cacc'
+  #   background:     '0x222d28'
+
+  # # Normal colors
+  # normal:
+  #   black:          '0x465258'
+  #   red:            '0xe68183'
+  #   green:          '0xa7c080'
+  #   yellow:         '0xd9bb80'
+  #   blue:           '0x89bed5'
+  #   magenta:        '0xd3a0bc'
+  #   cyan:           '0x87b6b8'
+  #   white:          '0x868d80'
+
+  # # Bright colors
+  # bright:
+  #   black:          '0x576268'
+  #   red:            '0xe98f92'
+  #   green:          '0xaabe8f'
+  #   yellow:         '0xd9cb90'
+  #   blue:           '0x7cadc5'
+  #   magenta:        '0xe3b9dc'
+  #   cyan:           '0x9ab9ba'
+  #   white:          '0xc1cacc'
+
+  # blossom
   primary:
-    foreground:     '0xc1cacc'
-    background:     '0x222d28'
+    foreground:     '0xDFDFF2'
+    background:     '0x2F3846'
 
   # Normal colors
   normal:
-    black:          '0x465258'
-    red:            '0xe68183'
-    green:          '0xa7c080'
-    yellow:         '0xd9bb80'
-    blue:           '0x89bed5'
-    magenta:        '0xd3a0bc'
-    cyan:           '0x87b6b8'
-    white:          '0x868d80'
+    black:          '0x3E4755'
+    red:            '0xE28479'
+    green:          '0x70B791'
+    yellow:         '0xC9C76B'
+    blue:           '0x839AEC'
+    magenta:        '0xC184B3'
+    cyan:           '0x78B3C5'
+    white:          '0xD2D2D4'
 
   # Bright colors
   bright:
-    black:          '0x576268'
-    red:            '0xe98f92'
-    green:          '0xaabe8f'
-    yellow:         '0xd9cb90'
-    blue:           '0x7cadc5'
-    magenta:        '0xe3b9dc'
-    cyan:           '0x9ab9ba'
-    white:          '0xc1cacc'
+    black:          '0x5D6473'
+    red:            '0xEC8E83'
+    green:          '0x7AC19B'
+    yellow:         '0xD3D175'
+    blue:           '0x8DA4F6'
+    magenta:        '0xCB8EBD'
+    cyan:           '0x82BDCF'
+    white:          '0xD1D1D3'
 
   # Dim colors
   #

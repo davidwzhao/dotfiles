@@ -1,5 +1,5 @@
 !! Import colorscheme
-#include ".Xresources.d/forest-night.xresources"
+#include ".Xresources.d/blossom.xresources"
 
 !! Set colors
 *background:    S_background
