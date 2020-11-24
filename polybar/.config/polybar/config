@@ -4,7 +4,7 @@ margin-bottom = 0
 ;
 
 [settings]
-format-padding = 1
+format-padding = 4
 format-background = ${colors.modulebg}
 
 [colors]
@@ -26,16 +26,16 @@ cyan = ${xrdb:color6}
 
 [bar/top]
 width = 100%
-height = 38
+height = 32
 offset-x = 0%
 offset-y= 0%
 ;fixed-center =
 override-redirect = false
 
 background = ${colors.bg}
-foreground = ${colors.fg}
+foreground = ${colors.bg}
 
-font-0 = SF Mono:style=Semibold:size=11:;3
+font-0 = SF Pro Display:style=Semibold:size=14:;4
 font-1 = Material Design Icons:size=13:;4
 ; font-2 = Wuncon Siji:pixelsize=11:;1
 
@@ -50,18 +50,18 @@ modules-right = spotify volume mega battery ssid
 ;tray-transparent = false
 ;tray-detached = false
 
-;open menu on right click
-;click-right = xdotool key super+m
-;click-right = "thunar &"
+; lines and borders
+overline-size = 0
+underline-size = 0
+line-color = ${colors.bg}
 
-overline-size = 2
+border-size = 6
+border-color = ${colors.bg}
 
-border-size = 0
-border-color = #00000000
-
-spacing = 1
-padding-left = 2
-padding-right = 2
+; spacing of modules
+spacing = 0
+padding-left = 1
+padding-right = 1
 module-margin-left = 1
 module-margin-right = 1
 
@@ -73,26 +73,28 @@ type = internal/pulseaudio
 
 use-ui-max = false
 
-format-volume = <ramp-volume><label-volume>
+label-volume = %percentage%
+format-volume = <ramp-volume> <label-volume>
 module-margin-right = 1
 ramp-volume-0 = 󰕿
 ramp-volume-1 = 󰖀
 ramp-volume-2 = 󰕾
 
-format-volume-foreground = ${colors.fg}
+;format-volume-foreground = ${colors.fg}
 ;format-volume-background = ${colors.bg}
 
-label-muted = 󰸈 ───
+label-muted = %percentage%
+format-muted = 󰸈 <label-muted>
 
-format-volume-overline = ${colors.blue}
-format-muted-overline = ${colors.blue}
+format-volume-background = ${colors.blue}
+format-muted-background = ${colors.blue}
 
 [module/xwindow]
 type = internal/xwindow
 interval = 1
 label = %title:0:50:...%
 
-format-overline = ${colors.orange}
+format-background = ${colors.orange}
 
 [module/xworkspaces]
 type = internal/xworkspaces
@@ -120,25 +122,25 @@ icon-9 = 10;10
 
 ; properties of current workspace
 label-active = %icon%
-label-active-padding = 1
+label-active-padding = 2
 label-active-foreground = ${colors.fg}
-label-active-background = ${colors.bg}
-label-active-overline = ${colors.orange}
+; label-active-background = ${colors.bg}
+label-active-background = ${colors.red}
 
 label-occupied = %icon%
-label-occupied-padding = 1
+label-occupied-padding = 2
 label-occupied-foreground = ${colors.fg}
+; label-occupied-background = ${colors.bg}
 label-occupied-background = ${colors.bg}
-label-occupied-overline = ${colors.focused}
 
 label-urgent = %icon%
-label-urgent-padding = 1
+label-urgent-padding = 2
 label-urgent-foreground = ${colors.fg}
-label-urgent-background = ${colors.bg}
-label-urgent-overline = ${colors.urgent}
+; label-urgent-background = ${colors.bg}
+label-urgent-background = ${colors.urgent}
 
 label-empty = %icon%
-label-empty-padding = 1
+label-empty-padding = 2
 label-empty-foreground = ${colors.fg}
 
 format-padding = 0
@@ -153,40 +155,41 @@ format = <label-state><label-mode>
 label-mode = %mode%
 label-mode-padding = 2
 label-mode-margin = 0
-label-mode-background = ${colors.bg}
-label-mode-overline = ${colors.yellow}
+label-mode-background = ${colors.yellow}
+label-mode-foreground = ${colors.bg}
+; label-mode-background = ${colors.yellow}
 
 label-focused =
-label-focused-padding = 0
-label-focused-margin = 0
-label-focused-overline = ${colors.yellow}
+label-focused-padding = 2
+label-focused-margin = 2
+label-focused-background = ${colors.yellow}
 
 label-unfocused =
-label-unfocused-padding = 0
-label-unfocused-margin = 0
-label-unfocused-overline = ${colors.yellow}
+label-unfocused-padding = 2
+label-unfocused-margin = 2
+label-unfocused-background = ${colors.yellow}
 
 label-visible =
-label-visible-padding = 0
-label-visible-margin = 0
-label-visible-overline = ${colors.yellow}
+label-visible-padding = 2
+label-visible-margin = 2
+label-visible-background = ${colors.yellow}
 
 label-urgent =
-label-urgent-padding = 0
-label-urgent-margin = 0
-label-urgent-overline = ${colors.yellow}
+label-urgent-padding = 2
+label-urgent-margin = 2
+label-urgent-background = ${colors.yellow}
 
 [module/date]
 type = internal/date
 interval = 1
-date = "%A, %d %B"
+date = "%a, %d %b"
 
 label = %date%
 format = <label>
 
 format-prefix = "󰃭 "
-format-overline = ${colors.magenta}
-format-background = ${colors.modulebg}
+; format-overline = ${colors.magenta}
+format-background = ${colors.magenta}
 
 [module/time]
 type = custom/script
@@ -199,11 +202,11 @@ exec = date +"%-I:%M %P"
 
 ;format = %icon-time% <time>
 ;format-padding = 1
-;format-background = #73ecec
+format-background = ${colors.magenta}
 ;format-foreground = #075859
 
 format-prefix = "󱑎 "
-format-overline = ${colors.magenta}
+; format-overline = ${colors.magenta}
 
 [module/memory]
 type = internal/memory
@@ -213,7 +216,7 @@ format = <label>
 label = "%percentage_used%"
 
 format-prefix = "󰍛 "
-format-overline = ${colors.cyan}
+format-background = ${colors.cyan}
 
 [module/temp]
 type = internal/temperature
@@ -231,8 +234,8 @@ label-warn-foreground = ${colors.orange}
 
 format-prefix = " "
 format-warn-prefix = " "
-format-overline = ${colors.cyan}
-format-warn-overline = ${colors.cyan}
+format-background = ${colors.cyan}
+format-warn-background = ${colors.cyan}
 
 [module/filesystem]
 type = internal/fs
@@ -253,7 +256,7 @@ exec =  ~/bin/spotify.sh
 interval = 1
 click-left = playerctl -p spotify play-pause
 
-format-overline = ${colors.blue}
+format-background = ${colors.blue}
 
 [module/mega]
 type = custom/script
@@ -261,7 +264,7 @@ exec =  ~/bin/mega-status.sh
 interval = 1
 
 format-prefix = "󰅟 "
-format-overline = ${colors.blue}
+format-background = ${colors.blue}
 
 [module/battery]
 type = internal/battery
@@ -274,36 +277,36 @@ full-at = 99
 battery = BAT0
 adapter = ADP0
 
-format-charging = <animation-charging><label-charging>
+format-charging = <animation-charging> <label-charging>
 label-charging = %percentage%
 
-format-discharging = <ramp-capacity><label-discharging>
+format-discharging = <ramp-capacity> <label-discharging>
 label-discharging = %percentage%
 
 format-full = 󰁹 <label-full>
 label-full = %percentage%
 
-ramp-capacity-0 = 󰁺
-ramp-capacity-1 = 󰁻
-ramp-capacity-2 = 󰁼
-ramp-capacity-3 = 󰁽
-ramp-capacity-4 = 󰁾
-ramp-capacity-5 = 󰁿
-ramp-capacity-6 = 󰂀
-ramp-capacity-7 = 󰂁
-ramp-capacity-8 = 󰁹 
+ramp-capacity-0 = 󰁺 
+ramp-capacity-1 = 󰁻 
+ramp-capacity-2 = 󰁼 
+ramp-capacity-3 = 󰁽 
+ramp-capacity-4 = 󰁾 
+ramp-capacity-5 = 󰁿 
+ramp-capacity-6 = 󰂀 
+ramp-capacity-7 = 󰂁 
+ramp-capacity-8 = 󰁹  
 
-animation-charging-0 = 󰂆
-animation-charging-1 = 󰂈
-animation-charging-2 = 󰢞
-animation-charging-3 = 󰂋
+animation-charging-0 = 󰂆 
+animation-charging-1 = 󰂈 
+animation-charging-2 = 󰢞 
+animation-charging-3 = 󰂋 
 
 ; Framerate in milliseconds
 animation-charging-framerate = 750
 
-format-charging-overline = ${colors.cyan}
-format-discharging-overline = ${colors.cyan}
-format-full-overline = ${colors.cyan}
+format-charging-background = ${colors.cyan}
+format-discharging-background = ${colors.cyan}
+format-full-background = ${colors.cyan}
 
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
@@ -323,7 +326,7 @@ interface = wlan0
 interval = 1
 accumulate-stats = true
 
-format-connected = <ramp-signal><label-connected>
+format-connected = <ramp-signal> <label-connected>
 ; label-connected = %essid%  %upspeed%  %downspeed%
 label-connected = %essid%
 
@@ -334,6 +337,6 @@ ramp-signal-3 = 󰤥
 ramp-signal-4 = 󰤨
 
 ; format-prefix = " "
-format-connected-overline = ${colors.green}
+format-connected-background = ${colors.green}
 
 ; vim:ft=dosini
