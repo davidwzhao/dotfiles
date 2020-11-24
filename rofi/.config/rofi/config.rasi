@@ -55,7 +55,7 @@ configuration {
 /*	window-format: "{w}    {c}   {t}";*/
 /*	click-to-exit: true;*/
 /*	show-match: true;*/
-	theme: "~/.cache/wal/colors-rofi.rasi";
+	theme: "colors-rofi.rasi";
 /*	color-normal: "#222d28, #c1cacc, #222d28, #d9cb90, #465258"; */
 /*	color-urgent: ;*/
 /*	color-active: "#222d28, #c1cacc, #222d28, #d9cb90, #465258"; */

@@ -9,7 +9,7 @@ if [[ $m == *"Connection"* ]] || [[ $m == *"Not available"* ]] || [[ $m == *"No 
 else
     artist=$(playerctl -p spotify metadata artist)
     title=$(playerctl -p spotify metadata title)
-    ret="$ret $artist - $title"
+    ret="$ret󰎇 $artist - $title"
 fi
 
 if [[ $m == "Paused" ]] ; then

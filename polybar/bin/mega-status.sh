@@ -18,7 +18,7 @@ if [[ "$uploads" -gt 0 ]]; then
 fi
 
 if [[ "$downloads" -eq 0 ]] && [[ "$uploads" -eq 0 ]]; then
-    ret=""
+    ret="󰄬"
 fi
 
 echo $ret

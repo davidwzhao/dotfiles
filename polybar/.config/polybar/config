@@ -36,12 +36,13 @@ background = ${colors.bg}
 foreground = ${colors.fg}
 
 font-0 = SF Mono:style=Semibold:size=11:;3
-font-1 = MaterialIcons:size=13:;5
-font-2 = Wuncon Siji:pixelsize=11:;1
+font-1 = Material Design Icons:size=13:;4
+; font-2 = Wuncon Siji:pixelsize=11:;1
 
 modules-left =  xworkspaces xwindow i3
 modules-center = time date
-modules-right = spotify volume mega memory temp gputemp filesystem ssid
+; modules-right = spotify volume mega memory temp gputemp filesystem ssid
+modules-right = spotify volume mega battery ssid
 
 ;tray-position = right
 ;tray-padding = 2
@@ -65,21 +66,23 @@ module-margin-left = 1
 module-margin-right = 1
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
-master-soundcard = default
-master-mixer = PCM
+; master-soundcard = default
+; master-mixer = PCM
+
+use-ui-max = false
 
 format-volume = <ramp-volume><label-volume>
 module-margin-right = 1
-ramp-volume-0 = 
-ramp-volume-1 = 
-ramp-volume-2 = 
+ramp-volume-0 = 󰕿
+ramp-volume-1 = 󰖀
+ramp-volume-2 = 󰕾
 
 format-volume-foreground = ${colors.fg}
 ;format-volume-background = ${colors.bg}
 
-label-muted =  ───
+label-muted = 󰸈 ───
 
 format-volume-overline = ${colors.blue}
 format-muted-overline = ${colors.blue}
@@ -181,24 +184,25 @@ date = "%A, %d %B"
 label = %date%
 format = <label>
 
-format-prefix = " "
+format-prefix = "󰃭 "
 format-overline = ${colors.magenta}
 format-background = ${colors.modulebg}
 
 [module/time]
-type = internal/date
+type = custom/script
 interval = 1
-time = "%OI:%M %P"
+exec = date +"%-I:%M %P"
+; time = "%l:%M %P"
 
-label = %time%
-format = <label>
+; label = %time%
+; format = <label> %exec%
 
 ;format = %icon-time% <time>
 ;format-padding = 1
 ;format-background = #73ecec
 ;format-foreground = #075859
 
-format-prefix = " "
+format-prefix = "󱑎 "
 format-overline = ${colors.magenta}
 
 [module/memory]
@@ -208,7 +212,7 @@ interval = 1
 format = <label>
 label = "%percentage_used%"
 
-format-prefix = " "
+format-prefix = "󰍛 "
 format-overline = ${colors.cyan}
 
 [module/temp]
@@ -230,37 +234,15 @@ format-warn-prefix = " "
 format-overline = ${colors.cyan}
 format-warn-overline = ${colors.cyan}
 
-[module/gputemp]
-type = internal/temperature
-interval = 1
-
-thermal-zone = 0
-; hwmon-path = /sys/devices/pci0000:00/0000:00:03.0/0000:03:00.0/hwmon/hwmon1/temp1_input
-; hwmon-path = /sys/devices/pci0000:00/0000:00:03.0/0000:03:00.0/hwmon/hwmon2/temp1_input
-hwmon-path = /sys/devices/pci0000:00/0000:00:03.0/0000:03:00.0/hwmon/hwmon3/temp1_input
-
-format = <label>
-format-warn = <label-warn>
-
-label = "%temperature-c%"
-label-warn = "%temperature-c%"
-label-warn-foreground = ${colors.orange}
-warn-temperature = 90
-
-format-prefix = " "
-format-warn-prefix = " "
-format-overline = ${colors.cyan}
-format-warn-overline = ${colors.cyan}
-
 [module/filesystem]
 type = internal/fs
 interval = 10
 
-mount-0 = /
+mount-0 = /home
 
 format-mounted = <label-mounted>
-label-mounted = " %percentage_used%"
-label-unmounted = " %mountpoint% ---"
+label-mounted = "󰋊 %percentage_used%"
+label-unmounted = "󰋊 %mountpoint% ---"
 
 format-mounted-overline = ${colors.cyan}
 format-unmounted-overline = ${colors.cyan}
@@ -268,7 +250,7 @@ format-unmounted-overline = ${colors.cyan}
 [module/spotify]
 type = custom/script
 exec =  ~/bin/spotify.sh
-interval = 0.1
+interval = 1
 click-left = playerctl -p spotify play-pause
 
 format-overline = ${colors.blue}
@@ -278,31 +260,80 @@ type = custom/script
 exec =  ~/bin/mega-status.sh
 interval = 1
 
-format-prefix = " "
+format-prefix = "󰅟 "
 format-overline = ${colors.blue}
 
-; [module/ssid]
-; type = custom/script
+[module/battery]
+type = internal/battery
 
-;format = <label><exec>
-;exec = iwconfig wlp8s0 | grep ESSID | awk '{out=""; for (i=4; i<= NF; i++) out=out$i" "; print out}' | sed 's/ESSID:"\|"//g' | head -c -2
-; exec = iwgetid -r
-; interval = 10
+; This is useful in case the battery never reports 100% charge
+full-at = 99
 
-; format-prefix = " "
-; format-overline = ${colors.green}
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP0
+
+format-charging = <animation-charging><label-charging>
+label-charging = %percentage%
+
+format-discharging = <ramp-capacity><label-discharging>
+label-discharging = %percentage%
+
+format-full = 󰁹 <label-full>
+label-full = %percentage%
+
+ramp-capacity-0 = 󰁺
+ramp-capacity-1 = 󰁻
+ramp-capacity-2 = 󰁼
+ramp-capacity-3 = 󰁽
+ramp-capacity-4 = 󰁾
+ramp-capacity-5 = 󰁿
+ramp-capacity-6 = 󰂀
+ramp-capacity-7 = 󰂁
+ramp-capacity-8 = 󰁹 
+
+animation-charging-0 = 󰂆
+animation-charging-1 = 󰂈
+animation-charging-2 = 󰢞
+animation-charging-3 = 󰂋
+
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+format-charging-overline = ${colors.cyan}
+format-discharging-overline = ${colors.cyan}
+format-full-overline = ${colors.cyan}
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
+
 
 [module/ssid]
 type = internal/network
-interface = wlp8s0
+interface = wlan0
 interval = 1
 accumulate-stats = true
 
-format-connected =  <label-connected>
+format-connected = <ramp-signal><label-connected>
 ; label-connected = %essid%  %upspeed%  %downspeed%
 label-connected = %essid%
 
-format-prefix = " "
+ramp-signal-0 = 󰤯
+ramp-signal-1 = 󰤟
+ramp-signal-2 = 󰤢
+ramp-signal-3 = 󰤥
+ramp-signal-4 = 󰤨
+
+; format-prefix = " "
 format-connected-overline = ${colors.green}
 
 ; vim:ft=dosini

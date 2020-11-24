@@ -13,11 +13,11 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:Fira Code Retina 8
+# font pango:Fira Code Retina 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -30,9 +30,11 @@ font pango:Fira Code Retina 8
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec alacritty -e tmux
 bindsym Control+Mod1+t exec alacritty -e tmux
+
+# lock screen
+bindsym Control+Mod1+l exec i3lock-fancy-rapid 24 4
 
 # kill focused window
 bindsym $mod+q kill
@@ -226,7 +228,10 @@ mode $powermenu {
 # autostart applications
 # exec --no-startup-id "wal -R"
 exec --no-startup-id ~/.fehbg
+exec --no-startup-id ~/bin/i3-auto-layout
 exec --no-startup-id picom
 exec --no-startup-id sxhkd
+exec --no-startup-id libinput-gestures
 exec --no-startup-id "redshift -l -34:151 -t 6500K:4000K"
 exec --no-startup-id "polybar top"
+exec --no-startup-id "sleep 1 && ~/bin/polybar-autohide"

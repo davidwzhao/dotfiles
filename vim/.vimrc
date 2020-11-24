@@ -47,6 +47,10 @@ set clipboard=unnamedplus
 set mouse=a
 set ttymouse=sgr        " Handle mouse correctly after column 220
 
+" Smoother scrolling on touchpad
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
 " Enable spell check
 setlocal spell spelllang=en_us
 

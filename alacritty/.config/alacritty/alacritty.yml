@@ -275,25 +275,25 @@ colors:
 
   # # Normal colors
   # normal:
-  #   black:   '0x454545'
-  #   red:     '0xefa6a2'
-  #   green:   '0x5accaf'
-  #   yellow:  '0xc8c874'
-  #   blue:    '0xccaced'
-  #   magenta: '0xf2a1c2'
-  #   cyan:    '0x74c3e4'
-  #   white:   '0xc0c0c0'
+  #   black:   '0x282A36'
+  #   red:     '0xFF4971'
+  #   green:   '0x18E3C8'
+  #   yellow:  '0xFF8037'
+  #   blue:    '0x556FFF'
+  #   magenta: '0xB043D1'
+  #   cyan:    '0x3FDCEE'
+  #   white:   '0xBEBEC1'
 
   # # Bright colors
   # bright:
-  #   black:   '0x656565'
-  #   red:     '0xe0af85'
-  #   green:   '0x80c990'
-  #   yellow:  '0xa69460'
-  #   blue:    '0xa3b8ef'
-  #   magenta: '0xe6a3dc'
-  #   cyan:    '0x50cacd'
-  #   white:   '0x808080'
+  #   black:   '0x616478'
+  #   red:     '0xF37F97'
+  #   green:   '0x5ADECD'
+  #   yellow:  '0xF2A272'
+  #   blue:    '0x8897F4'
+  #   magenta: '0xC574DD'
+  #   cyan:    '0x79E6F3'
+  #   white:   '0xFDFDFD'
 
   # # forest-night
   # primary:
@@ -322,32 +322,57 @@ colors:
   #   cyan:           '0x9ab9ba'
   #   white:          '0xc1cacc'
 
-  # blossom
+  # # blossom
+  # primary:
+  #   foreground:     '0xDFDFF2'
+  #   background:     '0x2F3846'
+
+  # # Normal colors
+  # normal:
+  #   black:          '0x3E4755'
+  #   red:            '0xE28479'
+  #   green:          '0x70B791'
+  #   yellow:         '0xC9C76B'
+  #   blue:           '0x839AEC'
+  #   magenta:        '0xC184B3'
+  #   cyan:           '0x78B3C5'
+  #   white:          '0xD2D2D4'
+
+  # # Bright colors
+  # bright:
+  #   black:          '0x5D6473'
+  #   red:            '0xEC8E83'
+  #   green:          '0x7AC19B'
+  #   yellow:         '0xD3D175'
+  #   blue:           '0x8DA4F6'
+  #   magenta:        '0xCB8EBD'
+  #   cyan:           '0x82BDCF'
+  #   white:          '0xD1D1D3'
+
+  # horizon
   primary:
-    foreground:     '0xDFDFF2'
-    background:     '0x2F3846'
+    foreground:     '0xcacacc'
+    background:     '0x1C1E27'
 
-  # Normal colors
   normal:
-    black:          '0x3E4755'
-    red:            '0xE28479'
-    green:          '0x70B791'
-    yellow:         '0xC9C76B'
-    blue:           '0x839AEC'
-    magenta:        '0xC184B3'
-    cyan:           '0x78B3C5'
-    white:          '0xD2D2D4'
+    black:          '0x1C1E27'
+    red:            '0xE4436F'
+    green:          '0x24e39d'
+    yellow:         '0xEDA685'
+    blue:           '0x2095B4'
+    magenta:        '0xB367CF'
+    cyan:           '0x00A5AF'
+    white:          '0xb5b5ba'
 
-  # Bright colors
   bright:
-    black:          '0x5D6473'
-    red:            '0xEC8E83'
-    green:          '0x7AC19B'
-    yellow:         '0xD3D175'
-    blue:           '0x8DA4F6'
-    magenta:        '0xCB8EBD'
-    cyan:           '0x82BDCF'
-    white:          '0xD1D1D3'
+    black:          '0x6C6F93'
+    red:            '0xD95882'
+    green:          '0x68DDC4'
+    yellow:         '0xE8AEAA'
+    blue:           '0x64A4BF'
+    magenta:        '0xB382CF'
+    cyan:           '0x54AEB8'
+    white:          '0xcacacc'
 
   # Dim colors
   #

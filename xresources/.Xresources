@@ -1,5 +1,5 @@
 !! Import colorscheme
-#include ".Xresources.d/blossom.xresources"
+#include ".Xresources.d/horizon.xresources"
 
 !! Set colors
 *background:    S_background
@@ -122,7 +122,7 @@ st.cwscale:			    1.0
 
 
 !! Display dpi
-Xft.dpi: 120
+Xft.dpi: 126
 Xcursor.size: 32
 
 !! Xft font rendering
