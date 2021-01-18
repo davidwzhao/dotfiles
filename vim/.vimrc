@@ -41,7 +41,7 @@ set scrolloff=5
 set hlsearch
 
 " Use system clipboard
-set clipboard=unnamedplus
+" set clipboard=unnamedplus
 
 " Enable mouse support
 set mouse=a
