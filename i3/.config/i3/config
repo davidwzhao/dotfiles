@@ -30,11 +30,12 @@ set $mod Mod4
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec alacritty -e tmux
-bindsym Control+Mod1+t exec alacritty -e tmux
+bindsym $mod+Return exec --no-startup-id alacritty -e tmux
+bindsym Control+Mod1+t exec --no-startup-id alacritty -e tmux
 
 # lock screen
-bindsym Control+Mod1+l exec i3lock-fancy-rapid 24 4
+# bindsym Control+Mod1+l exec --no-startup-id i3lock-fancy-rapid 32 4
+bindsym Control+Mod1+l exec --no-startup-id betterlockscreen -l blur
 
 # kill focused window
 bindsym $mod+q kill
@@ -45,7 +46,7 @@ bindsym $mod+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
 
 # change focus
@@ -204,9 +205,9 @@ client.unfocused            $bg         $bg             $fg         $yellow     
 for_window [class="^.*"] border pixel 2
 
 # gaps
-gaps inner 8
+gaps inner 4
 gaps outer 0
-# smart_gaps off
+smart_gaps on
 
 # mouse focus
 focus_follows_mouse no
@@ -234,4 +235,5 @@ exec --no-startup-id sxhkd
 exec --no-startup-id libinput-gestures
 exec --no-startup-id "redshift -l -34:151 -t 6500K:4000K"
 exec --no-startup-id "polybar top"
-exec --no-startup-id "sleep 1 && ~/bin/polybar-autohide"
+exec --no-startup-id "~/bin/polybar-autohide 2> /dev/null"
+exec --no-startup-id "xidlehook --not-when-audio --timer 900 'systemctl suspend-then-hibernate' ''"

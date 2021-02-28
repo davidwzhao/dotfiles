@@ -13,14 +13,14 @@ XF86MonBrightnessDown
 XF86MonBrightnessUp
     brightnessctl set 15+
 
-alt + minus
-    amixer sset PCM 5%-
-
-alt + equal
-    amixer sset PCM 5%+
-
-alt + 0
-    amixer sset PCM toggle
+# alt + minus
+#     amixer sset PCM 5%-
+# 
+# alt + equal
+#     amixer sset PCM 5%+
+# 
+# alt + 0
+#     amixer sset PCM toggle
 
 alt + p
     playerctl -p spotify play-pause

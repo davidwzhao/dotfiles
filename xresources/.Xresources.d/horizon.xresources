@@ -1,7 +1,7 @@
 #define S_foreground        #cacacc
 #define S_background        #1C1E27
 
-#define S_black             #1C1E27
+#define S_black             #3C3E47
 #define S_red               #E4436F
 #define S_green             #24e39d
 #define S_yellow            #EDA685

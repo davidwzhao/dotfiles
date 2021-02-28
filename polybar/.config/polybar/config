@@ -30,12 +30,12 @@ height = 32
 offset-x = 0%
 offset-y= 0%
 ;fixed-center =
-override-redirect = false
+override-redirect = true
 
 background = ${colors.bg}
 foreground = ${colors.bg}
 
-font-0 = SF Pro Display:style=Semibold:size=14:;4
+font-0 = SF Pro Display:style=Medium:size=14:;4
 font-1 = Material Design Icons:size=13:;4
 ; font-2 = Wuncon Siji:pixelsize=11:;1
 
@@ -123,7 +123,7 @@ icon-9 = 10;10
 ; properties of current workspace
 label-active = %icon%
 label-active-padding = 2
-label-active-foreground = ${colors.fg}
+; label-active-foreground = ${colors.fg}
 ; label-active-background = ${colors.bg}
 label-active-background = ${colors.red}
 
@@ -264,7 +264,7 @@ exec =  ~/bin/mega-status.sh
 interval = 1
 
 format-prefix = "󰅟 "
-format-background = ${colors.blue}
+format-background = ${colors.cyan}
 
 [module/battery]
 type = internal/battery
@@ -304,9 +304,9 @@ animation-charging-3 = 󰂋
 ; Framerate in milliseconds
 animation-charging-framerate = 750
 
-format-charging-background = ${colors.cyan}
-format-discharging-background = ${colors.cyan}
-format-full-background = ${colors.cyan}
+format-charging-background = ${colors.green}
+format-discharging-background = ${colors.green}
+format-full-background = ${colors.green}
 
 ; If an inotify event haven't been reported in this many
 ; seconds, manually poll for new values.
