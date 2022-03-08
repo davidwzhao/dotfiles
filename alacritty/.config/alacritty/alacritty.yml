@@ -210,6 +210,33 @@ colors:
   #  text: '0xeaeaea'
   #  background: '0x404040'
 
+  # amora
+  # Default colors
+  primary:
+    background: '0x2a2331'
+    foreground: '0xdedbeb'
+
+  # Normal colors
+  normal:
+    black:   '0x38323d'
+    red:     '0xed3f7f'
+    green:   '0xa2baa8'
+    yellow:  '0xeacac0'
+    blue:    '0x9985d1'
+    magenta: '0xe68ac1'
+    cyan:    '0xaabae7'
+    white:   '0xdedbeb'
+
+  # Bright colors
+  bright:
+    black:   '0x605868'
+    red:     '0xfb5c8e'
+    green:   '0xbfd1c3'
+    yellow:  '0xf0ddd8'
+    blue:    '0xb4a4de'
+    magenta: '0xedabd2'
+    cyan:    '0xc4d1f5'
+    white:   '0xedebf7'
 
   # # bliss
   # # Default colors
@@ -322,32 +349,32 @@ colors:
   #   cyan:           '0x9ab9ba'
   #   white:          '0xc1cacc'
 
-  # blossom
-  primary:
-    foreground:     '0xDFDFF2'
-    background:     '0x2F3846'
+  # # blossom
+  # primary:
+  #   foreground:     '0xDFDFF2'
+  #   background:     '0x2F3846'
 
-  # Normal colors
-  normal:
-    black:          '0x3E4755'
-    red:            '0xE28479'
-    green:          '0x70B791'
-    yellow:         '0xC9C76B'
-    blue:           '0x839AEC'
-    magenta:        '0xC184B3'
-    cyan:           '0x78B3C5'
-    white:          '0xD2D2D4'
+  # # Normal colors
+  # normal:
+  #   black:          '0x3E4755'
+  #   red:            '0xE28479'
+  #   green:          '0x70B791'
+  #   yellow:         '0xC9C76B'
+  #   blue:           '0x839AEC'
+  #   magenta:        '0xC184B3'
+  #   cyan:           '0x78B3C5'
+  #   white:          '0xD2D2D4'
 
-  # Bright colors
-  bright:
-    black:          '0x5D6473'
-    red:            '0xEC8E83'
-    green:          '0x7AC19B'
-    yellow:         '0xD3D175'
-    blue:           '0x8DA4F6'
-    magenta:        '0xCB8EBD'
-    cyan:           '0x82BDCF'
-    white:          '0xD1D1D3'
+  # # Bright colors
+  # bright:
+  #   black:          '0x5D6473'
+  #   red:            '0xEC8E83'
+  #   green:          '0x7AC19B'
+  #   yellow:         '0xD3D175'
+  #   blue:           '0x8DA4F6'
+  #   magenta:        '0xCB8EBD'
+  #   cyan:           '0x82BDCF'
+  #   white:          '0xD1D1D3'
 
   # Dim colors
   #

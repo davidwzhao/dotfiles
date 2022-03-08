@@ -1,6 +1,6 @@
 !! Import colorscheme
 ! #include ".Xresources.d/blossom.xresources"
-#include ".Xresources.d/blossom.xresources"
+#include ".Xresources.d/amora.xresources"
 
 !! Set colors
 *background:    S_background

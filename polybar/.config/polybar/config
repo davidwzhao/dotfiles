@@ -217,8 +217,9 @@ interval = 1
 
 thermal-zone = 0
 ; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon0/temp1_input
-; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
-hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon1/temp1_input
+; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon2/temp1_input
+; hwmon-path = /sys/devices/platform/coretemp.0/hwmon/hwmon3/temp1_input
 
 format = <label>
 format-warn = <label-warn>
@@ -297,7 +298,7 @@ format-overline = ${colors.blue}
 
 [module/ssid]
 type = internal/network
-interface = wlp8s0
+interface = wlan0
 interval = 1
 accumulate-stats = true
 

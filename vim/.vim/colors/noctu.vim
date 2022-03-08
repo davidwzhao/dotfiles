@@ -81,10 +81,10 @@ if exists("syntax_on")
   hi Function        ctermfg=1
   hi Identifier      ctermfg=9   cterm=NONE
   hi Statement       ctermfg=6
-  hi Constant        ctermfg=5
+  hi Constant        ctermfg=2
   hi Number          ctermfg=2
   hi Boolean         ctermfg=2
-  hi Special         ctermfg=13
+  hi Special         ctermfg=14
   hi Ignore          ctermfg=0
   hi PreProc         ctermfg=4   cterm=NONE
   hi! link Operator  Delimiter

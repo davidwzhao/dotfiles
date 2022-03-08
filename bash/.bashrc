@@ -113,10 +113,13 @@ export LESS='--mouse -R -F -X'
 # enable tab completion for sudo
 complete -cf sudo
 
+# add julia to path
+export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
+
 # for terminals, load pywal colorscheme
-if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
-    (cat "$HOME/.cache/wal/sequences" &)
-fi
+# if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
+#     (cat "$HOME/.cache/wal/sequences" &)
+# fi
 
 # start xorg on login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then

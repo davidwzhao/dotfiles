@@ -1,0 +1,21 @@
+! Amora colour scheme
+! From https://www.reddit.com/r/unixporn/comments/mykxnq/oc_amora_is_now_available_on_github/
+
+#define S_foreground #DEDBEB
+#define S_background #2A2331
+#define S_black #38323d
+#define S_darkgrey #605868
+#define S_darkred #ed3f7f
+#define S_red #fb5c8e
+#define S_darkgreen #a2baa8
+#define S_green #bfd1c3
+#define S_darkyellow #eacac0
+#define S_yellow #f0ddd8
+#define S_darkblue #9985d1
+#define S_blue #b4a4de
+#define S_darkmagenta #e68ac1
+#define S_magenta #edabd2
+#define S_darkcyan #aabae7
+#define S_cyan #c4d1f5
+#define S_lightgrey #dedbeb
+#define S_white #edebf7

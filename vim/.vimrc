@@ -29,7 +29,7 @@ endif
 let g:tex_flavor='latex'
 
 " Line at column 80
-" set colorcolumn=80
+set colorcolumn=80
 
 " Line wrap by word
 set linebreak
@@ -58,10 +58,14 @@ set undodir=~/.vimundo
 set nomodeline
 
 " Set automatic line breaking
-" set tw=120
+" set tw=80
+autocmd FileType tex set textwidth=80
 
 " Set lisp syntax highlighting for *.clisp files
 autocmd BufNewFile,BufRead *.clisp set syntax=lisp
 
 " Set souffle syntax highlighting for *.dl files
 autocmd BufNewFile,BufRead *.dl set syntax=souffle
+
+" Set delve syntax highlighting for *.dl files
+autocmd BufNewFile,BufRead *.delve set syntax=delve
