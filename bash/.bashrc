@@ -100,7 +100,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # aliases
-alias mega-status='mega-transfers --show-syncs --summary'
+# alias mega-status='mega-transfers --show-syncs --summary'
 
 # set default text editor
 export VISUAL=vim
@@ -114,7 +114,7 @@ export LESS='--mouse -R -F -X'
 complete -cf sudo
 
 # add julia to path
-export PATH=$PATH:/home/david/docs/julia-1.7.2/bin
+# export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
 
 # for terminals, load pywal colorscheme
 # if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
@@ -122,6 +122,8 @@ export PATH=$PATH:/home/david/docs/julia-1.7.2/bin
 # fi
 
 # start xorg on login
-if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
-fi
+# if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+#     startx
+# fi
+
+export BASH_SILENCE_DEPRECATION_WARNING=1
