@@ -1,8 +1,0 @@
-sh ~/.fehbg &
-# /home/david/bin/lemonscript.sh | lemonbar -b -g 3839x32+1+0 -f "Fira Code Retina:size=8" -f "Icons:size=9" -B#E5101010 &
-polybar top &
-compton &
-sxhkd &
-xrdb ~/.Xresources &
-
-sleep 2 && redshift -l -34:151 -t 6500K:3400K &
