@@ -114,7 +114,7 @@ export LESS='--mouse -R -F -X'
 complete -cf sudo
 
 # add julia to path
-export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
+export PATH=$PATH:/home/david/docs/julia-1.7.2/bin
 
 # for terminals, load pywal colorscheme
 # if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then

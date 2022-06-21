@@ -202,9 +202,9 @@ client.unfocused            $bg         $bg             $fg         $yellow     
 for_window [class="^.*"] border pixel 2
 
 # gaps
-gaps inner 8
+gaps inner 4
 gaps outer 0
-# smart_gaps off
+smart_gaps on
 
 # mouse focus
 focus_follows_mouse no
@@ -226,7 +226,8 @@ mode $powermenu {
 # autostart applications
 # exec --no-startup-id "wal -R"
 exec --no-startup-id ~/.fehbg
-exec --no-startup-id ~/bin/i3-auto-layout
+# exec --no-startup-id ~/bin/i3-auto-layout
+exec --no-startup-id autotiling
 exec --no-startup-id picom
 exec --no-startup-id sxhkd
 exec --no-startup-id "redshift -l -34:151 -t 6500K:4000K"
