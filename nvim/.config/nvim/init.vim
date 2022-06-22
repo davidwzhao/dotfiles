@@ -28,6 +28,9 @@ endif
 " Fix latex indenting
 let g:tex_flavor='latex'
 
+" Julia function call highlighting
+hi link juliaFunctionCall Identifier
+
 " Line at column 92
 set colorcolumn=92
 
@@ -71,6 +74,10 @@ autocmd BufNewFile,BufRead *.dl set syntax=souffle
 
 " Set delve syntax highlighting for *.rel files
 autocmd BufNewFile,BufRead *.rel set syntax=delve
+
+" Smoother vim scrolling on touchpad
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
 
 "
 " Plugins!

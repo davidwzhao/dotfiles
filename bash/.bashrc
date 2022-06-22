@@ -89,15 +89,22 @@ esac
 
 # enable color support of ls and also add handy aliases
 DIRCOLORS="$HOME/.bashrc.d/gruvbox.dircolors"
-if [ -x /usr/bin/dircolors ]; then
-    test -r "$DIRCOLORS" && eval "$(dircolors -b $DIRCOLORS)" || eval "$(dircolors -b)"
+# if [ -x /usr/bin/dircolors ]; then
+#     test -r "$DIRCOLORS" && eval "$(dircolors -b $DIRCOLORS)" || eval "$(dircolors -b)"
+# 
+#     alias ls='ls --color=auto'
+# 
+#     alias grep='grep --color=auto'
+#     alias fgrep='fgrep --color=auto'
+#     alias egrep='egrep --color=auto'
+# fi
 
-    alias ls='ls --color=auto'
+# macOS doesn't support dircolors, but we can use auto coloring anyway
+alias ls='ls --color=auto'
 
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 # aliases
 # alias mega-status='mega-transfers --show-syncs --summary'
@@ -116,6 +123,12 @@ complete -cf sudo
 # add julia to path
 # export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
 
+# Enable bash-completion
+[[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
+
+# Enable git-completion
+[[ -r "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash" ]] && . "/Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash"
+
 # for terminals, load pywal colorscheme
 # if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
 #     (cat "$HOME/.cache/wal/sequences" &)
@@ -127,3 +140,6 @@ complete -cf sudo
 # fi
 
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+# add Homebrew to path
+export PATH="/opt/homebrew/bin:$PATH"

@@ -17,9 +17,9 @@ window:
   #
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
-  #dimensions:
-  #  columns: 0
-  #  lines: 0
+  dimensions:
+    columns: 300
+    lines: 80
 
   # Window position (changes require restart)
   #
@@ -148,13 +148,13 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 15.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: 3
+    y: 4
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
@@ -210,33 +210,33 @@ colors:
   #  text: '0xeaeaea'
   #  background: '0x404040'
 
-  # amora
-  # Default colors
-  primary:
-    background: '0x2a2331'
-    foreground: '0xdedbeb'
+  # # amora
+  # # Default colors
+  # primary:
+  #   background: '0x2a2331'
+  #   foreground: '0xdedbeb'
 
-  # Normal colors
-  normal:
-    black:   '0x38323d'
-    red:     '0xed3f7f'
-    green:   '0xa2baa8'
-    yellow:  '0xeacac0'
-    blue:    '0x9985d1'
-    magenta: '0xe68ac1'
-    cyan:    '0xaabae7'
-    white:   '0xdedbeb'
+  # # Normal colors
+  # normal:
+  #   black:   '0x38323d'
+  #   red:     '0xed3f7f'
+  #   green:   '0xa2baa8'
+  #   yellow:  '0xeacac0'
+  #   blue:    '0x9985d1'
+  #   magenta: '0xe68ac1'
+  #   cyan:    '0xaabae7'
+  #   white:   '0xdedbeb'
 
-  # Bright colors
-  bright:
-    black:   '0x605868'
-    red:     '0xfb5c8e'
-    green:   '0xbfd1c3'
-    yellow:  '0xf0ddd8'
-    blue:    '0xb4a4de'
-    magenta: '0xedabd2'
-    cyan:    '0xc4d1f5'
-    white:   '0xedebf7'
+  # # Bright colors
+  # bright:
+  #   black:   '0x605868'
+  #   red:     '0xfb5c8e'
+  #   green:   '0xbfd1c3'
+  #   yellow:  '0xf0ddd8'
+  #   blue:    '0xb4a4de'
+  #   magenta: '0xedabd2'
+  #   cyan:    '0xc4d1f5'
+  #   white:   '0xedebf7'
 
   # # bliss
   # # Default colors
@@ -376,6 +376,33 @@ colors:
   #   cyan:           '0x82BDCF'
   #   white:          '0xD1D1D3'
 
+  # tokyo-night
+  primary:
+    background:     '0x1f202a'
+    foreground:     '0xb9c1dc'
+
+  # Normal colors
+  normal:
+    black:          '0x32344a'
+    red:            '0xf7768e'
+    green:          '0x9ece6a'
+    yellow:         '0xe0af68'
+    blue:           '0x7aa2f7'
+    magenta:        '0xad8ee6'
+    cyan:           '0x449dab'
+    white:          '0x787c99'
+
+  # Bright colors
+  bright:
+    black:          '0x444b6a'
+    red:            '0xff7a93'
+    green:          '0xb9f27c'
+    yellow:         '0xff9e64'
+    blue:           '0x7da6ff'
+    magenta:        '0xbb9af7'
+    cyan:           '0x0db9d7'
+    white:          '0xacb0d0'
+
   # Dim colors
   #
   # If the dim colors are not set, they will be calculated automatically based
@@ -467,7 +494,7 @@ colors:
 #   - (Linux/BSD) user login shell
 #   - (Windows) powershell
 shell:
-  program: /bin/bash
+  program: /opt/homebrew/bin/bash
   args:
     - --login
 
