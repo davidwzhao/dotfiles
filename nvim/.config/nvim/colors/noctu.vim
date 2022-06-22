@@ -45,10 +45,10 @@ if exists("syntax_on")
   hi Directory           ctermfg=12
   hi Title               ctermfg=3     cterm=bold
   hi ErrorMsg            ctermfg=0     ctermbg=9
-  hi DiffAdd             ctermfg=0     ctermbg=2
-  hi DiffChange          ctermfg=0     ctermbg=3
-  hi DiffDelete          ctermfg=0     ctermbg=1
-  hi DiffText            ctermfg=0     ctermbg=11    cterm=bold
+  hi DiffAdd             ctermfg=2     ctermbg=NONE
+  hi DiffChange          ctermfg=3     ctermbg=NONE
+  hi DiffDelete          ctermfg=1     ctermbg=NONE
+  hi DiffText            ctermfg=11    ctermbg=0    cterm=bold
   hi User1               ctermfg=1     ctermbg=0
   hi User2               ctermfg=4     ctermbg=0
   hi User3               ctermfg=2     ctermbg=0
