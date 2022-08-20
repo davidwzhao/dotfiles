@@ -123,6 +123,8 @@ complete -cf sudo
 # add julia to path
 # export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
 
+alias jj='export JULIA_PROJECT=$PWD && julia'
+
 # Enable bash-completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
 

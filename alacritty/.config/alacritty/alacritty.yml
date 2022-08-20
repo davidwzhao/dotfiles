@@ -735,28 +735,31 @@ key_bindings:
   #- { key: Home,      mods: Shift,   action: ScrollToTop,    mode: ~Alt       }
   #- { key: End,       mods: Shift,   action: ScrollToBottom, mode: ~Alt       }
   #
-  - { key: Key0,   mods: Alt,             chars: "\x1b0"    }
-  - { key: Key1,   mods: Alt,             chars: "\x1b1"    }
-  - { key: Key2,   mods: Alt,             chars: "\x1b2"    }
-  - { key: Key3,   mods: Alt,             chars: "\x1b3"    }
-  - { key: Key4,   mods: Alt,             chars: "\x1b4"    }
-  - { key: Key5,   mods: Alt,             chars: "\x1b5"    }
-  - { key: Key6,   mods: Alt,             chars: "\x1b6"    }
-  - { key: Key7,   mods: Alt,             chars: "\x1b7"    }
-  - { key: Key8,   mods: Alt,             chars: "\x1b8"    }
-  - { key: Key9,   mods: Alt,             chars: "\x1b9"    }
+  - { key: Key0,    mods: Alt,            chars: "\x1b0"    }
+  - { key: Key1,    mods: Alt,            chars: "\x1b1"    }
+  - { key: Key2,    mods: Alt,            chars: "\x1b2"    }
+  - { key: Key3,    mods: Alt,            chars: "\x1b3"    }
+  - { key: Key4,    mods: Alt,            chars: "\x1b4"    }
+  - { key: Key5,    mods: Alt,            chars: "\x1b5"    }
+  - { key: Key6,    mods: Alt,            chars: "\x1b6"    }
+  - { key: Key7,    mods: Alt,            chars: "\x1b7"    }
+  - { key: Key8,    mods: Alt,            chars: "\x1b8"    }
+  - { key: Key9,    mods: Alt,            chars: "\x1b9"    }
 
   # Creating new tmux panes
-  - { key: S,      mods: Alt,             chars: "\x1bs"    }
-  - { key: V,      mods: Alt,             chars: "\x1bv"    }
+  - { key: S,       mods: Alt,            chars: "\x1bs"    }
+  - { key: V,       mods: Alt,            chars: "\x1bv"    }
 
   # Moving between tmux panes
-  - { key: H,      mods: Alt,             chars: "\x1bh"    }
-  - { key: J,      mods: Alt,             chars: "\x1bj"    }
-  - { key: K,      mods: Alt,             chars: "\x1bk"    }
-  - { key: L,      mods: Alt,             chars: "\x1bl"    }
-  - { key: W,      mods: Alt,             chars: "\x1bw"    }
+  - { key: H,       mods: Alt,            chars: "\x1bh"    }
+  - { key: J,       mods: Alt,            chars: "\x1bj"    }
+  - { key: K,       mods: Alt,            chars: "\x1bk"    }
+  - { key: L,       mods: Alt,            chars: "\x1bl"    }
+  - { key: W,       mods: Alt,            chars: "\x1bw"    }
 
   # Forwards/backwards in bash
-  - { key: F,      mods: Alt,             chars: "\x1bf"    }
-  - { key: B,      mods: Alt,             chars: "\x1bb"    }
+  - { key: F,       mods: Alt,            chars: "\x1bf"    }
+  - { key: B,       mods: Alt,            chars: "\x1bb"    }
+
+  # Use MacOS new window without new process
+  - { key: N,       mods: Command,        action: CreateNewWindow }

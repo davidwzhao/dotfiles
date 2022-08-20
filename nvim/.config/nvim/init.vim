@@ -12,13 +12,14 @@ set background=dark
 " let g:solarized_contrast="high"
 " let g:solarized_visibility="high"
 colorscheme noctu
- 
+
 " Tabs and stuff
 set shiftwidth=4        " Size of tab when using >> or <<
 set tabstop=4           " Size of tab
 set softtabstop=4       " Size of soft tab
 set expandtab           " Enable soft tabs
-set autoindent          " Automatically indent same as previous line
+set smartindent          " Automatically indent same as previous line
+" filetype indent off
 
 " Auto indenting based on filetype
 if has("autocmd")
@@ -29,7 +30,7 @@ endif
 let g:tex_flavor='latex'
 
 " Julia function call highlighting
-hi link juliaFunctionCall Identifier
+" hi link juliaFunctionCall Identifier
 
 " Line at column 92
 set colorcolumn=92
@@ -59,7 +60,11 @@ set undofile
 set undodir=~/.cache/nvimundo
 
 " Disable modelines for security reasons
-set nomodeline
+" set nomodeline
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
 
 " Set automatic line breaking
 set tw=92
@@ -95,7 +100,19 @@ call plug#begin()
 Plug 'neovim/nvim-lspconfig'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lewis6991/gitsigns.nvim'
+" Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
+" julia-vim options
+let g:julia_indent_align_brackets=0
+let g:julia_indent_align_funcargs=0
+
 lua require('init')
+
+" GitGutter options
+" GitGutterLineNrHighlightsEnable
+" GitGutterSignsDisable
+
+" Set gitsigns to diff against master
+" Gitsigns change_base master
