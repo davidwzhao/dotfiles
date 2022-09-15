@@ -124,6 +124,7 @@ complete -cf sudo
 # export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
 
 alias jj='export JULIA_PROJECT=$PWD && julia'
+alias ag='ag --color-match "1;31"'
 
 # Enable bash-completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"

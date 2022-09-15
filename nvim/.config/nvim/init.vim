@@ -85,11 +85,11 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 " omnifunc autocompletion without LSP
-filetype plugin on
-set omnifunc=syntaxcomplete#Complete
-set completeopt-=preview
-
-inoremap <C-n> <C-x><C-o>
+" filetype plugin on
+" set omnifunc=syntaxcomplete#Complete
+" set completeopt-=preview
+"
+" inoremap <C-n> <C-x><C-o>
 
 "
 " Plugins!
@@ -101,6 +101,14 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'lewis6991/gitsigns.nvim'
 " Plug 'airblade/vim-gitgutter'
+
+" Completion
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-vsnip'
+Plug 'hrsh7th/vim-vsnip'
+
 
 call plug#end()
 
