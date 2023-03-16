@@ -1,7 +1,7 @@
 " Vim syntax file
-" Language: Delve
+" Language: Rel
 " Maintainer: Ryan Curtin
-" Latest Revision: Jul 09 2020
+" Latest Revision: June 3 2021
 
 if exists("b:current_syntax")
   finish
@@ -10,50 +10,56 @@ endif
 "
 " Decl keywords
 "
-syn keyword delveBasicLanguageKeywords def
-syn keyword delveBasicLanguageKeywords ic
-syn keyword delveBasicLanguageKeywords bound
-syn keyword delveBasicLanguageKeywords entity
+syn keyword relBasicLanguageKeywords def
+syn keyword relBasicLanguageKeywords ic
+syn keyword relBasicLanguageKeywords bound
+syn keyword relBasicLanguageKeywords entity
 
 "
 " Attributes (adapted from python.vim)
 "
-syn match delveAttribute "@" display contained
-syn match delveAttributeName "@\s*\h\%(\w\|\.\)*" display contains=delveAttribute
+syn match relAttribute "@" display contained
+syn match relAttributeName "@\s*\h\%(\w\|\.\)*" display contains=relAttribute
 
 "
 " Comments (adapted from c.vim and tex.vim)
 "
-syn region delveCommentL start="//" skip="\\$" end="$" keepend
-syn region delveMultilineComment start="/\*" end="\*/" keepend
+syn region relCommentL start="//" skip="\\$" end="$" keepend contains=relTodo
+syn region relMultilineComment start="/\*" end="\*/" keepend contains=relTodo
+syn region relDocstring start=+doc"""+ skip=+\\\\\|\\"+ end=+"""+ keepend
+syn keyword relTodo TODO FIXME XXX contained
 
 "
 " Operator keywords
 "
-syn keyword delveOperatorKeywords exists forall and or not for in from
-syn match delveMathOperators "+\|-\|\*\|/^[/]\|<\|>\|=\|!"
+syn keyword relOperatorKeywords exists forall and or not for in from
+syn match relMathOperators "+\|-\|\*\|/^[/]\|<\|>\|=\|!"
 
 " this probably isn't very good...
-syn match delveString "\"[^\"]*\"\|'.'" display
-syn match delveSymbol ":\h\(\h\|\d\)*" display
-syn match delveNumbers "\<\d\+\(\.\d\+\)\?\>" display
+" syn region relMultilineString start="\"\"\"" end="\"\"\"" keepend
+syn match relString "\"[^\"]*\"\|'.'" display
+syn match relSymbol ":\h\(\h\|\d\)*" display
+syn match relNumbers "\<\d\+\(\.\d\+\)\?\>" display
 
-syn match delveBrackets "(\|)\|\[\|\]\|{\|}" display
+syn match relBrackets "(\|)\|\[\|\]\|{\|}" display
 
 " Assign types from earlier to vim highlighting types.
-hi def link delveBasicLanguageKeywords Function
+hi def link relBasicLanguageKeywords Function
 
-hi def link delveAttribute Define
-hi def link delveAttributeName Define
+hi def link relAttribute Define
+hi def link relAttributeName Define
 
-hi def link delveCommentL Comment
-hi def link delveMultilineComment Comment
+hi def link relCommentL Comment
+hi def link relMultilineComment Comment
+hi def link relDocstring Comment
+hi def link relTodo Todo
 
-hi def link delveOperatorKeywords Operator
-hi def link delveMathOperators Operator
+hi def link relOperatorKeywords Operator
+hi def link relMathOperators Operator
 
-hi def link delveString String
-hi def link delveSymbol Constant
-hi def link delveNumbers Number
+" hi def link relMultilineString String
+hi def link relString String
+hi def link relSymbol Constant
+hi def link relNumbers Number
 
-hi def link delveBrackets Special
+hi def link relBrackets Special

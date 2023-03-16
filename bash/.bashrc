@@ -122,9 +122,12 @@ complete -cf sudo
 
 # add julia to path
 # export PATH=$PATH:/home/david/docs/julia-1.6.1/bin
+# export JULIA_NUM_THREADS="$(($(sysctl -n hw.perflevel0.logicalcpu) - 1))"
+export JULIA_NUM_THREADS=1
+export SALSA_STATIC_DEBUG=true
 
 alias jj='export JULIA_PROJECT=$PWD && julia'
-alias ag='ag --color-match "1;31"'
+alias ag='ag --color --color-match "1;31"'
 
 # Enable bash-completion
 [[ -r "/opt/homebrew/etc/profile.d/bash_completion.sh" ]] && . "/opt/homebrew/etc/profile.d/bash_completion.sh"
@@ -146,3 +149,20 @@ export BASH_SILENCE_DEPRECATION_WARNING=1
 
 # add Homebrew to path
 export PATH="/opt/homebrew/bin:$PATH"
+
+# add mactex to path
+export PATH="/usr/local/texlive/2022/bin/universal-darwin:$PATH"
+
+# Use the_silver_searcher for fzf
+# export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore /Users/dzhao/.ignore --nocolor --hidden -G ""'
+# export FZF_CTRL_T_COMMAND='ag -l --path-to-ignore /Users/dzhao/.ignore --nocolor --hidden -G ""'
+# Use fd for fzf
+export FZF_DEFAULT_COMMAND='fd --relative-path --strip-cwd-prefix'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+# export FZF_DEFAULT_OPTS="--history $HOME/.cache/fzf/history"
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Ruby chruby setup
+source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+# source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+# chruby ruby-3.1.3

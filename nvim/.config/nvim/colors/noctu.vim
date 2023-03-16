@@ -78,13 +78,13 @@ if exists("syntax_on")
   hi String          ctermfg=4
   hi Keyword         ctermfg=12
   hi Todo            ctermfg=15  ctermbg=NONE     cterm=bold,underline
-  hi Function        ctermfg=1
-  hi Identifier      ctermfg=9   cterm=NONE
-  hi Statement       ctermfg=6
+  hi Function        ctermfg=1   cterm=NONE
+  hi Identifier      ctermfg=15  cterm=NONE
+  hi Statement       ctermfg=14
   hi Constant        ctermfg=2
   hi Number          ctermfg=2
   hi Boolean         ctermfg=2
-  hi Special         ctermfg=14
+  hi Special         ctermfg=6
   hi Ignore          ctermfg=0
   hi PreProc         ctermfg=4   cterm=NONE
   hi! link Operator  Delimiter

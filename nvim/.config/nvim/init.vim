@@ -85,9 +85,9 @@ map <ScrollWheelUp> <C-Y>
 map <ScrollWheelDown> <C-E>
 
 " omnifunc autocompletion without LSP
-" filetype plugin on
+filetype plugin on
 " set omnifunc=syntaxcomplete#Complete
-" set completeopt-=preview
+set completeopt-=preview
 "
 " inoremap <C-n> <C-x><C-o>
 
@@ -109,6 +109,11 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
+" Treesitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+" Comment
+Plug 'numToStr/Comment.nvim'
 
 call plug#end()
 
