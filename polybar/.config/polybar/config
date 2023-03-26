@@ -65,10 +65,12 @@ module-margin-left = 1
 module-margin-right = 1
 
 [module/volume]
-type = internal/alsa
+type = internal/pulseaudio
 
-master-soundcard = default
-master-mixer = PCM
+; master-soundcard = default
+; master-mixer = PCM
+
+use-ui-max = false
 
 format-volume = <ramp-volume><label-volume>
 module-margin-right = 1

@@ -7,14 +7,23 @@
 # XF86AudioMute
 #     /home/david/Documents/Scripts/volumeMute.sh
 
+# alt + minus
+#     amixer sset PCM 5%-
+# 
+# alt + equal
+#     amixer sset PCM 5%+
+# 
+# alt + 0
+#     amixer sset PCM toggle
+
 alt + minus
-    amixer sset PCM 5%-
+    pulsemixer --change-volume -5
 
 alt + equal
-    amixer sset PCM 5%+
+    pulsemixer --change-volume +5
 
 alt + 0
-    amixer sset PCM toggle
+    pulsemixer --toggle-mute
 
 alt + p
     playerctl -p spotify play-pause

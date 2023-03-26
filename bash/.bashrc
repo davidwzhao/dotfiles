@@ -116,6 +116,9 @@ complete -cf sudo
 # add julia to path
 export PATH=$PATH:/home/david/docs/julia-1.7.2/bin
 
+# add cisco anyconnect to path
+export PATH=$PATH:/opt/cisco/anyconnect/bin
+
 # for terminals, load pywal colorscheme
 # if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
 #     (cat "$HOME/.cache/wal/sequences" &)

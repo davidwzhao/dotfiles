@@ -59,8 +59,8 @@ set undodir=~/.cache/nvimundo
 set nomodeline
 
 " Set automatic line breaking
-set tw=92
-autocmd FileType tex set textwidth=92
+" set tw=80
+autocmd FileType tex set textwidth=80
 autocmd FileType markdown set textwidth=92
 
 " Set lisp syntax highlighting for *.clisp files

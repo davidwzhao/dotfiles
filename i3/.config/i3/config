@@ -31,8 +31,8 @@ floating_modifier $mod
 
 # start a terminal
 # bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec alacritty -e tmux
-bindsym Control+Mod1+t exec alacritty -e tmux
+bindsym $mod+Return exec --no-startup-id alacritty -e tmux
+bindsym Control+Mod1+t exec --no-startup-id alacritty -e tmux
 
 # kill focused window
 bindsym $mod+q kill
@@ -43,7 +43,7 @@ bindsym $mod+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec "rofi -show drun"
+bindsym $mod+d exec --no-startup-id "rofi -show drun"
 
 
 # change focus
@@ -133,6 +133,12 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# switch to relative workspace
+# bindsym Control+$mod+Left exec --no-startup-id "xdotool set_desktop --relative -- -1"
+# bindsym Control+$mod+Right exec --no-startup-id "xdotool set_desktop --relative 1"
+bindsym Control+$mod+Left workspace prev_on_output
+bindsym Control+$mod+Right workspace next_on_output
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -214,9 +220,9 @@ set $powermenu "[s]leep  [l]ogout  [p]oweroff  [r]eboot"
 bindsym $mod+Shift+e    mode $powermenu
 
 mode $powermenu {
-    bindsym s       exec "systemctl suspend", mode "default"
-    bindsym p       exec "systemctl poweroff", mode "default"
-    bindsym r       exec "systemctl reboot", mode "default"
+    bindsym s       exec --no-startup-id "systemctl suspend", mode "default"
+    bindsym p       exec --no-startup-id "systemctl poweroff", mode "default"
+    bindsym r       exec --no-startup-id "systemctl reboot", mode "default"
     bindsym l       exit
     bindsym Return  mode "default"
     bindsym Escape  mode "default"
