@@ -35,7 +35,8 @@ bindsym Control+Mod1+t exec --no-startup-id alacritty -e tmux
 
 # lock screen
 # bindsym Control+Mod1+l exec --no-startup-id i3lock-fancy-rapid 32 4
-bindsym Control+Mod1+l exec --no-startup-id betterlockscreen -l blur
+# bindsym Control+Mod1+l exec --no-startup-id betterlockscreen -l blur
+bindsym Control+Mod1+l exec --no-startup-id "i3lock -i ~/.cache/betterlockscreen/current/wall_blur.png"
 
 # kill focused window
 bindsym $mod+q kill
@@ -204,6 +205,11 @@ client.unfocused            $bg         $bg             $fg         $yellow     
 # set border size and disable titlebar
 for_window [class="^.*"] border pixel 2
 
+for_window [class="zoom\s?$"] floating enable
+for_window [class="zoom\s?$" title="Zoom - Licensed Account"] floating disable
+for_window [class="zoom\s?$" title="Zoom - Free Account"] floating disable
+for_window [class="zoom\s?$" title="Zoom Meeting"] floating disable
+
 # gaps
 gaps inner 4
 gaps outer 0
@@ -236,4 +242,5 @@ exec --no-startup-id libinput-gestures
 exec --no-startup-id "redshift -l -34:151 -t 6500K:4000K"
 exec --no-startup-id "polybar top"
 exec --no-startup-id "~/bin/polybar-autohide 2> /dev/null"
-exec --no-startup-id "xidlehook --not-when-audio --timer 900 'systemctl suspend-then-hibernate' ''"
+exec --no-startup-id "xidlehook --not-when-audio --timer 900 'systemctl suspend' ''"
+exec --no-startup-id "xss-lock --transfer-sleep-lock -- i3lock --nofork -i ~/.cache/betterlockscreen/current/wall_blur.png"

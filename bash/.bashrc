@@ -113,6 +113,9 @@ export LESS='--mouse -R -F -X'
 # enable tab completion for sudo
 complete -cf sudo
 
+# add julia to PATH
+export PATH=$PATH:/home/david/Documents/julia-1.6.1/bin
+
 # start xorg on login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     startx

@@ -31,6 +31,7 @@
     background-color: @background;
     border: 2px;
     padding: 3ch;
+    width: 24em;
 }
 
 #mainbox {
@@ -66,6 +67,7 @@
     spacing: 0px;
     scrollbar: false;
     padding: 6px 0px 0px;
+    lines: 12;
 }
 
 #element {
@@ -159,5 +161,10 @@
     spacing: 1;
     margin: 0px 0px 4px 0em;
     text-color: @normal-foreground;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
 }
 

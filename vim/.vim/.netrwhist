@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/etc/systemd/user'
+let g:netrw_dirhist_7='/etc/systemd/system'
+let g:netrw_dirhist_6='/home/david/Mega/Uni/PhD/incremental-testing/points-to/inc-in'
+let g:netrw_dirhist_5='/etc/systemd/user'
+let g:netrw_dirhist_4='/home/david/.local/share/applications'
+let g:netrw_dirhist_3='/home/david/Documents/raicode/packages/Datalog/src'
 let g:netrw_dirhist_2='/home/david/.config/sxhkd'
 let g:netrw_dirhist_1='/home/david/.config/alacritty'
