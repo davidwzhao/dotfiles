@@ -1,0 +1,94 @@
+/* Frappe Lavender */
+@define-color accent #B382CF;
+@define-color txt @theme_fg_color;
+@define-color bg @theme_bg_color;
+@define-color bg2 #262831;
+
+ * {
+    font-family: 'SF Mono', monospace;
+    font-size: 14px;
+ }
+
+ /* Window */
+ window {
+    margin: 0px;
+    padding: 4px;
+    border: 3px solid alpha(@accent, 0.2);
+    border-radius: 3px;
+    background-color: @bg;
+    /* animation: slideIn 0.2s ease-in-out both; */
+ }
+
+ /* Slide In */
+ @keyframes slideIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Inner Box */
+ #inner-box {
+    margin: 5px;
+    padding: 0px;
+    border: none;
+    background-color: @bg;
+    /* animation: fadeIn 0.2s ease-in-out both; */
+ }
+
+ /* Fade In */
+ @keyframes fadeIn {
+    0% {
+       opacity: 0;
+    }
+
+    100% {
+       opacity: 1;
+    }
+ }
+
+ /* Outer Box */
+ #outer-box {
+    margin: 5px;
+    padding: 4px;
+    border: none;
+    background-color: @bg;
+ }
+
+ /* Scroll */
+ #scroll {
+    margin: 0px;
+    padding: 2px;
+    border: none;
+ }
+
+ /* Input */
+ #input {
+    margin: 5px;
+    padding: 2px 10px 2px 10px;
+    border: none;
+    color: @fg;
+    background-color: @bg2;
+    /* animation: fadeIn 0.2s ease-in-out both; */
+ }
+
+ /* Text */
+ #text {
+    margin: 5px;
+    padding: 2px;
+    border: none;
+    color: @txt;
+    /* animation: fadeIn 0.2s ease-in-out both; */
+ }
+
+ /* Selected Entry */
+ #entry:selected {
+   background-color: @accent;
+ }
+
+ #entry:selected #text {
+    color: @bg;
+ }

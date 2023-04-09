@@ -16,4 +16,6 @@ if [[ $m == "Paused" ]] ; then
     ret="$ret (paused)"
 fi
 
+ret="$(echo $ret | tr '&' '\\&' )"
+
 echo $ret

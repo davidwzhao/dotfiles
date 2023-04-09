@@ -118,5 +118,5 @@ export PATH=$PATH:/home/david/Documents/julia-1.6.1/bin
 
 # start xorg on login
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
-    startx
+    Hyprland
 fi

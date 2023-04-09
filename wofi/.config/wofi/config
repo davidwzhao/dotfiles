@@ -1,0 +1,7 @@
+show=drun
+width=500
+height=600
+always_parse_args=false
+show_all=false
+allow_images=false
+prompt=

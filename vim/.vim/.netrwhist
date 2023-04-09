@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/david/dotfiles/waybar/.config/waybar'
 let g:netrw_dirhist_8='/etc/systemd/user'
 let g:netrw_dirhist_7='/etc/systemd/system'
 let g:netrw_dirhist_6='/home/david/Mega/Uni/PhD/incremental-testing/points-to/inc-in'
