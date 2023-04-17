@@ -119,6 +119,10 @@ export PATH=$PATH:/home/david/docs/julia-1.7.2/bin
 # add cisco anyconnect to path
 export PATH=$PATH:/opt/cisco/anyconnect/bin
 
+# install ruby gems to "/.gems"
+export GEM_HOME="$HOME/.gems"
+export PATH="$PATH:$HOME/.local/share/gem/ruby/3.0.0/bin"
+
 # for terminals, load pywal colorscheme
 # if [[ "$TERM" != linux ]] && [[ -f "$HOME/.cache/wal/sequences" ]]; then
 #     (cat "$HOME/.cache/wal/sequences" &)
