@@ -20,9 +20,9 @@
 * {
   border: none;
   border-radius: 0;
-  font-family: SF Pro Display;
+  font-family: SF Mono;
   /* font-weight: 600; */
-  font-size: 13px;
+  font-size: 14px;
   min-height: 0;
 }
 
@@ -44,13 +44,13 @@ tooltip {
 }
 
 #workspaces button {
-  padding: 2px;
-  color: #535764;
+  padding: 1px;
+  color: #636774;
   margin-right: 5px;
 }
 
 #workspaces button.active {
-  color: #a6adc8;
+  color: @color_foreground;
 }
 
 #workspaces button.urgent {
@@ -59,21 +59,20 @@ tooltip {
   border-radius: 10px;
 }
 
-/*
 #workspaces button.focused {
-  color: #a6adc8;
+  color: @color_foreground;
   background: #fafafa;
   border-radius: 10px;
 }
 
 #workspaces button:hover {
-  / background: #11111b; /
-  color: black;
+  background: @color_background_light;
+  /* color: black; */
   border-radius: 10rem;
 }
-*/
 
 #window,
+#submap,
 #pulseaudio,
 #network,
 #workspaces,
@@ -88,8 +87,8 @@ tooltip {
 #backlight {
   /* background: #212127; */
   background: @color_background_light;
-  padding: 2px;
-  margin: 2px 0 2px 0;
+  padding: 1px;
+  margin: 0px 0 0px 0;
   /* border: 1px solid #181825; */
   font-weight: 600;
   border-radius: 10rem;
@@ -107,7 +106,7 @@ tooltip {
   margin-left: 10px;
   padding-right: 0px;
   padding-left: 5px;
-  margin-right: 1rem;
+  /* margin-right: 2px; */
   font-weight: Bold;
 }
 
@@ -138,6 +137,7 @@ tooltip {
   border-right: 0;
   border-left: 0;
   margin-right: 0;
+  margin-left: 0;
 }
 
 #battery {
@@ -147,11 +147,16 @@ tooltip {
   margin-left: 0;
 }
 
+#submap {
+  border-radius: 10px;
+}
+
 #window {
   border-radius: 10px;
   background: transparent;
-  margin-left: 0;
-  margin-right: 60px;
+  margin-left: 1rem;
+  /* margin-left: 0; */
+  /* margin-right: 60px; */
 }
 
 #custom-clock {

@@ -120,3 +120,5 @@ export PATH=$PATH:/home/david/Documents/julia-1.6.1/bin
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
     Hyprland
 fi
+
+export QT_QPA_PLATFORM=wayland
